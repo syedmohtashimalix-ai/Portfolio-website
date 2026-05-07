@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
 /* =========================
    RESET
 ========================= */
@@ -16,7 +26,7 @@ body{
 }
 
 /* =========================
-   MATRIX BACKGROUND CANVAS
+   MATRIX BACKGROUND
 ========================= */
 #matrix{
     position:fixed;
@@ -33,7 +43,7 @@ body{
 header{
     width:100%;
     padding:20px 8%;
-    background:#120909;
+    background:#0a0a0a;
     position:sticky;
     top:0;
     z-index:1000;
@@ -68,7 +78,6 @@ nav a:hover{
     align-items:center;
     padding:60px 8%;
     gap:40px;
-    transform:translateY(-10px);
 }
 
 .hero-text{
@@ -92,21 +101,21 @@ nav a:hover{
 }
 
 /* =========================
-   CV BADGE
+   CV BADGE (UNDER TEXT)
 ========================= */
 .cv-badge{
+    margin-top:18px;
     display:inline-flex;
     align-items:center;
-    gap:6px;
+    gap:8px;
 
-    padding:6px 10px;
-    margin-top:15px;
+    padding:6px 12px;
 
     font-size:12px;
     font-weight:600;
 
     color:#00bfff;
-    background:rgba(0,191,255,0.1);
+    background:rgba(0,191,255,0.12);
 
     border:1px solid #00bfff;
     border-radius:20px;
@@ -122,7 +131,6 @@ nav a:hover{
     background:#00bfff;
     color:#000;
     transform:scale(1.05);
-    box-shadow:0 0 18px rgba(0,191,255,0.4);
 }
 
 /* =========================
@@ -157,7 +165,7 @@ section{
 }
 
 /* =========================
-   CARDS (UNIFIED STYLE)
+   CARDS (ALL SAME STYLE)
 ========================= */
 .cards{
     display:grid;
@@ -238,254 +246,7 @@ section{
 footer{
     text-align:center;
     padding:40px;
-    background:#120909;
-    color:#dcdcdc;
-}
-
-</style>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luxury Portfolio</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<style>
-/* =========================
-   RESET
-========================= */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#000;
-    color:white;
-    overflow-x:hidden;
-}
-
-/* =========================
-   MATRIX BACKGROUND
-========================= */
-#matrix{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:-1;
-}
-
-/* =========================
-   HEADER
-========================= */
-header{
-    width:100%;
-    padding:20px 8%;
-    background:#120909;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:1px solid rgba(0,191,255,0.3);
-}
-
-nav a{
-    text-decoration:none;
-    color:#fff;
-    margin-left:20px;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:#00bfff;
-}
-
-/* =========================
-   HERO
-========================= */
-.hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:60px 8%;
-    gap:40px;
-}
-
-.hero-text{
-    width:60%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-}
-
-.hero-text h2{
-    font-size:60px;
-    margin-bottom:20px;
-    color:#00bfff;
-}
-
-.hero-text p{
-    font-size:18px;
-    line-height:1.8;
-    color:#dcdcdc;
-}
-
-/* CV BUTTON */
-.cv-badge{
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-
-    margin-top:15px;
-
-    padding:6px 10px;
-
-    font-size:12px;
-    font-weight:600;
-
-    color:#00bfff;
-    background:rgba(0,191,255,0.1);
-
-    border:1px solid #00bfff;
-    border-radius:20px;
-
-    text-decoration:none;
-
-    box-shadow:0 0 12px rgba(0,191,255,0.25);
-
-    transition:0.3s ease;
-}
-
-.cv-badge:hover{
-    background:#00bfff;
-    color:#000;
-    transform:scale(1.05);
-}
-
-/* =========================
-   HERO IMAGE
-========================= */
-.hero-image{
-    width:335px;
-    height:335px;
-    border:3px solid #00bfff;
-    box-shadow:0 0 25px rgba(0,191,255,0.4);
-    overflow:hidden;
-}
-
-.hero-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-/* =========================
-   SECTIONS
-========================= */
-section{
-    padding:80px 8%;
-}
-
-.section-title{
-    text-align:center;
-    font-size:42px;
-    margin-bottom:50px;
-    color:#00bfff;
-}
-
-/* =========================
-   CARDS
-========================= */
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(0,191,255,0.3);
-
-    padding:30px;
-    border-radius:12px;
-
-    box-shadow:0 8px 18px rgba(0,191,255,0.15);
-
-    transition:0.3s ease;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 12px 28px rgba(0,191,255,0.3);
-}
-
-.card h3{
-    color:#00bfff;
-    margin-bottom:15px;
-}
-
-/* =========================
-   CONTACT
-========================= */
-.contact-card a{
-    display:flex;
-    align-items:center;
-    gap:8px;
-
-    color:#fff;
-    text-decoration:none;
-
-    padding:6px 0;
-}
-
-.contact-card a:hover{
-    color:#00bfff;
-}
-
-/* =========================
-   SKILLS
-========================= */
-.skill{
-    margin-bottom:25px;
-}
-
-.skill-name{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:8px;
-}
-
-.progress{
-    width:100%;
-    height:12px;
-    background:#2b2b2b;
-    border-radius:10px;
-    overflow:hidden;
-}
-
-.progress-bar{
-    height:100%;
-    background:#00bfff;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer{
-    text-align:center;
-    padding:40px;
-    background:#120909;
+    background:#0a0a0a;
     color:#dcdcdc;
 }
 </style>
@@ -493,7 +254,6 @@ footer{
 
 <body>
 
-<!-- MATRIX BACKGROUND -->
 <canvas id="matrix"></canvas>
 
 <header>
@@ -515,18 +275,18 @@ footer{
         <h2>Syed Mohtashim Ali</h2>
 
         <p>
-            I am a Software Engineering student at GISMA University in Berlin. I am passionate about web development, AI tools, and software engineering.
+            I am a Software Engineering student at GISMA University in Berlin. I love web development, AI tools, and building digital projects.
         </p>
 
-        <!-- CV BUTTON -->
+        <!-- CV BADGE -->
         <a class="cv-badge" href="cv.pdf" target="_blank">
             <i class="fa-solid fa-file-arrow-down"></i>
-            CV
+            View CV
         </a>
     </div>
 
     <div class="hero-image">
-        <img src="profile.jpg" alt="Profile Photo">
+        <img src="profile.jpg" alt="Profile">
     </div>
 
 </section>
@@ -537,9 +297,9 @@ footer{
 
     <div class="cards">
         <div class="card contact-card">
-            <h3>Contact Information</h3>
+            <h3>Contact Info</h3>
 
-            <a href="mailto:test@email.com"><i class="fa-solid fa-envelope"></i>Email</a>
+            <a href="mailto:test@mail.com"><i class="fa-solid fa-envelope"></i>Email</a>
             <a href="#"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
             <a href="#"><i class="fa-brands fa-github"></i>GitHub</a>
         </div>
@@ -549,11 +309,10 @@ footer{
 <!-- EDUCATION -->
 <section id="education">
     <h2 class="section-title">Education</h2>
-
     <div class="cards">
         <div class="card">
-            <h3>University</h3>
-            <p>Software Engineering at GISMA University Berlin</p>
+            <h3>GISMA University</h3>
+            <p>Software Engineering (Berlin)</p>
         </div>
     </div>
 </section>
@@ -561,10 +320,9 @@ footer{
 <!-- SKILLS -->
 <section id="skills">
     <h2 class="section-title">Skills</h2>
-
     <div class="cards">
         <div class="card">
-            <p>HTML / CSS / Python / AI Tools</p>
+            <p>HTML, CSS, Python, AI Tools</p>
         </div>
     </div>
 </section>
@@ -572,11 +330,10 @@ footer{
 <!-- EXPERIENCE -->
 <section id="experience">
     <h2 class="section-title">Experience</h2>
-
     <div class="cards">
         <div class="card">
             <h3>Hotel Night Auditor</h3>
-            <p>1.5 years experience in hospitality industry</p>
+            <p>1.5 years experience in hospitality</p>
         </div>
     </div>
 </section>
@@ -584,11 +341,10 @@ footer{
 <!-- PROJECTS -->
 <section id="projects">
     <h2 class="section-title">Projects</h2>
-
     <div class="cards">
         <div class="card">
             <h3>Essay Project</h3>
-            <p>Academic writing project</p>
+            <p>Academic writing work</p>
         </div>
     </div>
 </section>
@@ -597,7 +353,7 @@ footer{
     <p>Thank you for visiting my portfolio</p>
 </footer>
 
-<!-- MATRIX SCRIPT -->
+<!-- MATRIX JS -->
 <script>
 const canvas = document.getElementById("matrix");
 const ctx = canvas.getContext("2d");
@@ -607,8 +363,8 @@ canvas.height = window.innerHeight;
 
 const letters = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const fontSize = 14;
-
 const columns = canvas.width / fontSize;
+
 const drops = Array(Math.floor(columns)).fill(1);
 
 function draw(){
@@ -623,7 +379,7 @@ function draw(){
         ctx.fillText(text, i*fontSize, drops[i]*fontSize);
 
         if(drops[i]*fontSize > canvas.height){
-            drops[i]=0;
+            drops[i] = 0;
         }
 
         drops[i]++;
