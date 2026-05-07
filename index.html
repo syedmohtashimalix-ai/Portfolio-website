@@ -264,40 +264,49 @@ footer{
     transition: 0.3s ease;
 }
 
-.cv-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 30px rgba(0,255,136,0.4);
+.cv-card {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 14px;
+
+    background: #0f1f16;
+    border: 1px solid #00ff88;
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow: 0 0 15px rgba(0,255,136,0.2);
+    max-width: 200px;   /* smaller card */
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers everything including CV card */
 }
 
 .cv-card h3 {
-    font-size: 16px;
+    font-size: 14px;
     color: #00ff88;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .cv-card p {
-    font-size: 12px;
+    font-size: 11px;
     color: #dcdcdc;
-    margin-bottom: 12px;
-    line-height: 1.4;
+    margin-bottom: 10px;
 }
 
 .cv-btn {
-    display: inline-block;
-    padding: 8px 14px;
-    font-size: 12px;
+    padding: 7px 12px;
+    font-size: 11px;
     background: #00ff88;
     color: black;
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
-    transition: 0.3s;
 }
-
-.cv-btn:hover {
-    background: white;
-    transform: scale(1.05);
-}
+    
 </style>
 </head>
 <body>
@@ -334,25 +343,26 @@ footer{
         </p>
 
             <!-- CV CARD -->
-<div class="cv-card">
-
-    <h3>My CV</h3>
+<div class="hero-text">
+    <h2>Syed Mohtashim Ali</h2>
 
     <p>
-        Download my professional CV and resume document.
+        I am a first-semester Bachelor’s student in Software Engineering...
     </p>
 
-    <a href="my-cv.pdf" download class="cv-btn">
-        Download CV
-    </a>
+    <!-- CV CARD (CENTERED BELOW TEXT) -->
+    <div class="cv-card">
+        <h3>My CV</h3>
 
+        <p>
+            Download my professional CV.
+        </p>
+
+        <a href="my-cv.pdf" download class="cv-btn">
+            Download CV
+        </a>
+    </div>
 </div>
-    </div>
-
-    <div class="hero-image">
-        <img src="profile.jpg" alt="Profile Photo">
-    </div>
-
 </section>
 
 <section id="contact">
