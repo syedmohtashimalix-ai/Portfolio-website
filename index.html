@@ -247,6 +247,57 @@ footer{
         font-size:40px;
     }
 }
+    .cv-card {
+    display: inline-block;
+    max-width: 260px;
+    margin-top: 20px;
+    padding: 16px;
+    
+    /* Green dark luxury style */
+    background: #0f1f16;
+    border: 1px solid #00ff88;
+    border-radius: 12px;
+
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,255,136,0.25);
+
+    transition: 0.3s ease;
+}
+
+.cv-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0,255,136,0.4);
+}
+
+.cv-card h3 {
+    font-size: 16px;
+    color: #00ff88;
+    margin-bottom: 8px;
+}
+
+.cv-card p {
+    font-size: 12px;
+    color: #dcdcdc;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.cv-btn {
+    display: inline-block;
+    padding: 8px 14px;
+    font-size: 12px;
+    background: #00ff88;
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cv-btn:hover {
+    background: white;
+    transform: scale(1.05);
+}
 </style>
 </head>
 <body>
@@ -281,6 +332,21 @@ footer{
             I am a first-semester Bachelor’s student in Software Engineering at GISMA University of Applied Sciences in Berlin. I am an open-minded and motivated individual with a strong interest in software engineering, web development, AI tools, and project management. I enjoy building creative software, web applications, and digital solutions while continuously learning modern technologies. My goal is to become a skilled software engineer and contribute to innovative digital projects in the future.
 
         </p>
+
+            <!-- CV CARD -->
+<div class="cv-card">
+
+    <h3>My CV</h3>
+
+    <p>
+        Download my professional CV and resume document.
+    </p>
+
+    <a href="my-cv.pdf" download class="cv-btn">
+        Download CV
+    </a>
+
+</div>
     </div>
 
     <div class="hero-image">
