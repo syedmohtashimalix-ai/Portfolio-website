@@ -163,7 +163,7 @@ body{
     width:100%;
     height:100%;
     z-index:-2;
-    opacity:10; /* 🔥 darker so text readable */
+    opacity:6; /* 🔥 darker so text readable */
 }
 
 /* dark overlay for readability */
@@ -475,68 +475,120 @@ footer{
 }
 
 /* =========================
-   SKILL CARD PREMIUM STYLE
+   SKILLS PREMIUM STYLE
 ========================= */
+
 .skill-card{
-    max-width: 320px;
-    margin: auto;
-
     background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(0,247,255,0.2);
 
-    border-radius: 14px;
+    border: 1px solid rgba(0,247,255,0.18);
 
-    padding: 18px;
+    border-radius: 18px;
 
-    box-shadow: 0 8px 18px rgba(0,247,255,0.12);
+    padding: 22px;
 
-    transition: 0.3s ease;
+    box-shadow: 0 8px 22px rgba(0,247,255,0.08);
+
+    transition: 0.35s ease;
 }
 
 .skill-card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(0,247,255,0.25);
+    transform: translateY(-6px);
+
+    box-shadow: 0 0 24px rgba(0,247,255,0.22);
 }
 
-/* TOP ROW */
+/* TITLE */
 .skill-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    margin-bottom:12px;
+    margin-bottom: 16px;
 }
 
 .skill-top h3{
-    color:#ffffff;
-    font-size:16px;
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 600;
 }
 
-.skill-top span{
-    color:#00f7ff;
-    font-size:14px;
-    font-weight:600;
-}
-
-/* PROGRESS BAR */
+/* PROGRESS CONTAINER */
 .progress{
-    width:100%;
-    height:10px;
+    width: 100%;
 
-    background:#111827;
+    height: 12px;
 
-    border-radius:20px;
-    overflow:hidden;
+    background: rgba(255,255,255,0.08);
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    position: relative;
 }
 
+/* BAR */
 .progress-bar{
-    height:100%;
+    height: 100%;
 
-    background:linear-gradient(90deg,#00c8ff,#00ff88);
+    border-radius: 30px;
 
-    border-radius:20px;
+    background: linear-gradient(
+        90deg,
+        #00c8ff,
+        #00ffcc
+    );
 
-    box-shadow:0 0 12px rgba(0,247,255,0.4);
+    box-shadow: 0 0 18px rgba(0,247,255,0.45);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* SHINE EFFECT */
+.progress-bar::after{
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.4),
+        transparent
+    );
+
+    animation: shine 2.5s infinite;
+}
+
+/* WIDTHS */
+.html-css{
+    width: 40%;
+}
+
+.python{
+    width: 25%;
+}
+
+.ai{
+    width: 55%;
+}
+
+.teamwork{
+    width: 95%;
+}
+
+/* ANIMATION */
+@keyframes shine{
+    100%{
+        left: 120%;
+    }
 }
 
    /* =========================
@@ -630,81 +682,110 @@ footer{
 }
 
 /* =========================
-   LANGUAGE SECTION
+   LANGUAGE PREMIUM STYLE
 ========================= */
 
 .language-card{
-    max-width:320px;
+    background: rgba(255,255,255,0.05);
 
-    margin:auto;
+    border: 1px solid rgba(0,247,255,0.18);
 
-    background:rgba(255,255,255,0.05);
+    border-radius: 18px;
 
-    border:1px solid rgba(0,247,255,0.18);
+    padding: 22px;
 
-    border-radius:16px;
+    box-shadow: 0 8px 22px rgba(0,247,255,0.08);
 
-    padding:20px;
-
-    box-shadow:0 8px 20px rgba(0,247,255,0.08);
-
-    transition:0.35s ease;
+    transition: 0.35s ease;
 }
 
 .language-card:hover{
-    transform:translateY(-5px);
+    transform: translateY(-6px);
 
-    box-shadow:0 0 22px rgba(0,247,255,0.22);
+    box-shadow: 0 0 24px rgba(0,247,255,0.22);
 }
 
-/* TOP */
+/* TITLE */
 .language-top{
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    margin-bottom:14px;
+    margin-bottom: 16px;
 }
 
 .language-top h3{
-    color:#ffffff;
+    color: #ffffff;
 
-    font-size:18px;
+    font-size: 18px;
+
+    font-weight: 600;
 }
 
-.language-top span{
-    color:#00f7ff;
+/* PROGRESS */
+.progress{
+    width: 100%;
 
-    font-size:14px;
+    height: 12px;
 
-    font-weight:600;
+    background: rgba(255,255,255,0.08);
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    position: relative;
 }
 
 /* BAR */
-.progress{
-    width:100%;
-
-    height:10px;
-
-    background:#111827;
-
-    border-radius:20px;
-
-    overflow:hidden;
-}
-
 .progress-bar{
-    height:100%;
+    height: 100%;
 
-    border-radius:20px;
+    border-radius: 30px;
 
-    background:linear-gradient(90deg,#00c8ff,#00ff88);
+    background: linear-gradient(
+        90deg,
+        #00c8ff,
+        #00ff88
+    );
 
-    box-shadow:0 0 12px rgba(0,247,255,0.35);
+    box-shadow: 0 0 18px rgba(0,247,255,0.45);
+
+    position: relative;
+
+    overflow: hidden;
 }
-   
+
+/* SHINE EFFECT */
+.progress-bar::after{
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.4),
+        transparent
+    );
+
+    animation: shine 2.5s infinite;
+}
+
+/* LANGUAGE LEVELS */
+.urdu{
+    width: 100%;
+}
+
+.english{
+    width: 65%;
+}
+
+.german{
+    width: 50%;
+}
 
 /* SKILLS */
 .skill-text{
@@ -833,11 +914,10 @@ footer{
 
             <div class="language-top">
                 <h3>Urdu</h3>
-                <span>100%</span>
             </div>
 
             <div class="progress">
-                <div class="progress-bar" style="width:100%;"></div>
+                <div class="progress-bar urdu"></div>
             </div>
 
         </div>
@@ -847,11 +927,10 @@ footer{
 
             <div class="language-top">
                 <h3>English</h3>
-                <span>65%</span>
             </div>
 
             <div class="progress">
-                <div class="progress-bar" style="width:65%;"></div>
+                <div class="progress-bar english"></div>
             </div>
 
         </div>
@@ -861,77 +940,74 @@ footer{
 
             <div class="language-top">
                 <h3>German</h3>
-                <span>50%</span>
             </div>
 
             <div class="progress">
-                <div class="progress-bar" style="width:50%;"></div>
+                <div class="progress-bar german"></div>
             </div>
 
         </div>
 
     </div>
-
 </section>
    
 <!-- SKILLS -->
+
+   <!-- SKILLS -->
 <section id="skills">
+
     <h2 class="section-title">Skills</h2>
 
     <div class="cards">
 
-        <!-- HTML -->
+        <!-- HTML & CSS -->
         <div class="card skill-card">
 
             <div class="skill-top">
-                <h3>HTML</h3>
-                <span>30%</span>
+                <h3>HTML & CSS</h3>
             </div>
 
             <div class="progress">
-                <div class="progress-bar" style="width:30%;"></div>
+                <div class="progress-bar html-css"></div>
             </div>
 
         </div>
 
-        <!-- Python -->
+        <!-- PYTHON -->
         <div class="card skill-card">
 
             <div class="skill-top">
                 <h3>Python</h3>
-                <span>20%</span>
             </div>
 
             <div class="progress">
-                <div class="progress-bar" style="width:20%;"></div>
+                <div class="progress-bar python"></div>
             </div>
 
         </div>
 
-        <!-- AI -->
+        <!-- AI TOOLS -->
         <div class="card skill-card">
 
             <div class="skill-top">
                 <h3>AI Tools</h3>
-                <span>50%</span>
             </div>
 
             <div class="progress">
-                <div class="progress-bar" style="width:50%;"></div>
+                <div class="progress-bar ai"></div>
             </div>
 
         </div>
 
-        <!-- Teamwork -->
+        <!-- TEAMWORK -->
         <div class="card skill-card">
 
             <div class="skill-top">
                 <h3>Teamwork</h3>
-                <span>100%</span>
             </div>
 
             <div class="progress">
-                <div class="progress-bar" style="width:100%;"></div>
+                <div class="progress-bar teamwork"></div>
             </div>
 
         </div>
