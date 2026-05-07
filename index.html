@@ -271,11 +271,36 @@ section{
 }
 
 /* =========================
-   CV BUTTON
+   CV BADGE (FINAL)
 ========================= */
-.contact-card .btn {
-    margin-top: 12px;
-    align-self: flex-start;
+.cv-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 6px 10px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #00ff88;
+    background: rgba(0, 255, 136, 0.10);
+
+    border: 1px solid #00ff88;
+    border-radius: 20px;
+
+    text-decoration: none;
+
+    box-shadow: 0 0 12px rgba(0, 255, 136, 0.18);
+
+    transition: 0.25s ease;
+}
+
+.cv-badge:hover {
+    background: #00ff88;
+    color: #000;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 18px rgba(0, 255, 136, 0.35);
 }
 
 /* =========================
@@ -365,10 +390,10 @@ footer {
             I am a first-semester Bachelor’s student in Software Engineering at GISMA University of Applied Sciences in Berlin. I am an open-minded and motivated individual with a strong interest in software engineering, web development, AI tools, and project management. I enjoy building creative software, web applications, and digital solutions while continuously learning modern technologies.
         </p>
 
-        <!-- CV BUTTON MOVED HERE (UNDER TEXT) -->
-        <a class="btn" href="cv.pdf" target="_blank">
-            View CV
-        </a>
+        <a class="cv-badge" href="cv.pdf" target="_blank">
+    <i class="fa-solid fa-file-arrow-down"></i>
+    CV
+</a>
     </div>
 
     <div class="hero-image">
