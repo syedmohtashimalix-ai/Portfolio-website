@@ -54,6 +54,8 @@ $portfolio
 │
 └── README.md
 
+```
+
 ---
 
 ## 👨‍💻 Sections Included
