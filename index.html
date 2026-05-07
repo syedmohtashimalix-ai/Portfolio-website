@@ -8,6 +8,134 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
+
+/* =========================
+   PROJECT SECTION
+========================= */
+
+.project-card{
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(0,247,255,0.18);
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    box-shadow: 0 8px 22px rgba(0,247,255,0.08);
+
+    transition: 0.35s ease;
+}
+
+.project-card:hover{
+    transform: translateY(-6px);
+
+    box-shadow: 0 0 25px rgba(0,247,255,0.22);
+}
+
+/* TITLE */
+.project-card h3{
+    color:#ffffff;
+
+    margin-bottom:14px;
+
+    font-size:20px;
+}
+
+/* BADGE */
+.project-card .badge{
+    display:inline-block;
+
+    margin-bottom:16px;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    font-size:11px;
+    font-weight:600;
+
+    color:#00ffcc;
+
+    background:rgba(0,255,200,0.12);
+
+    border:1px solid rgba(0,255,200,0.35);
+}
+
+/* DESCRIPTION */
+.project-desc{
+    color:rgba(255,255,255,0.78);
+
+    line-height:1.8;
+
+    font-size:14px;
+
+    margin-bottom:18px;
+}
+
+/* SKILLS */
+.project-skills{
+    color:#00f7ff;
+
+    line-height:1.7;
+
+    font-size:14px;
+
+    margin-bottom:22px;
+}
+
+/* BUTTON */
+.project-btn{
+    display:inline-block;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    background:#00c8ff;
+
+    color:#000;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:0.3s ease;
+
+    box-shadow:0 0 12px rgba(0,200,255,0.35);
+}
+
+.project-btn:hover{
+    background:#00ffcc;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 20px rgba(0,255,200,0.5);
+}
+
+/* =========================
+   CLOSING SECTION
+========================= */
+
+.closing-section{
+    padding:80px 20px 60px;
+}
+
+.closing-text{
+    text-align:center;
+
+    color:rgba(255,255,255,0.72);
+
+    max-width:820px;
+
+    margin:auto;
+
+    font-size:15px;
+
+    line-height:2;
+
+    letter-spacing:0.3px;
+}
 /* =========================
    GLOBAL RESET
 ========================= */
@@ -692,7 +820,7 @@ footer{
         <!-- CARD 1 -->
         <div class="card experience-card">
 
-            <h3>🧑‍💻 Computer Lab Assistant</h3>
+            <h3>IT Technical Support</h3>
 
             <div class="badge-wrap">
                 <span class="badge">IT Support</span>
@@ -846,20 +974,105 @@ footer{
 </section>
 
 <!-- PROJECTS -->
+<!-- PROJECTS -->
 <section id="projects">
+
     <h2 class="section-title">Projects</h2>
 
     <div class="cards">
-        <div class="card">
-            <h3>Portfolio Website</h3>
-            <p>Modern responsive personal website built with HTML & CSS.</p>
+
+        <!-- PROJECT 1 -->
+        <div class="card project-card">
+
+            <h3>📘 Academic Writing</h3>
+
+            <span class="badge">Academic Project</span>
+
+            <p class="project-desc">
+                Research paper analyzing the evolution of technology
+                and its impact on modern software systems.
+            </p>
+
+            <div class="project-skills">
+                <b>Skills Used:</b>
+                Research, Documentation, Academic Writing
+            </div>
+
+            <a class="btn project-btn"
+               href="academic-writing.pdf"
+               target="_blank">
+               Open PDF
+            </a>
+
         </div>
 
-        <div class="card">
-            <h3>Research Project</h3>
-            <p>Academic research in technology and software development.</p>
+        <!-- PROJECT 2 -->
+        <div class="card project-card">
+
+            <h3>📊 Research Methodology</h3>
+
+            <span class="badge">Academic Project</span>
+
+            <p class="project-desc">
+                Study focused on research methods, data collection techniques,
+                and structured academic reporting.
+            </p>
+
+            <div class="project-skills">
+                <b>Skills Used:</b>
+                Analysis, Research Methods, Report Writing
+            </div>
+
+            <a class="btn project-btn"
+               href="research-methodology.pdf"
+               target="_blank">
+               Open PDF
+            </a>
+
         </div>
+
+        <!-- PROJECT 3 -->
+        <div class="card project-card">
+
+            <h3>⛓️ Blockchain Research</h3>
+
+            <span class="badge">Technology Research</span>
+
+            <p class="project-desc">
+                Research on blockchain technology,
+                system architecture, and real-world applications.
+            </p>
+
+            <div class="project-skills">
+                <b>Skills Used:</b>
+                Blockchain Concepts, Critical Thinking, Documentation
+            </div>
+
+            <a class="btn project-btn"
+               href="blockchain.pdf"
+               target="_blank">
+               Open PDF
+            </a>
+
+        </div>
+
     </div>
+
+</section>
+
+<!-- PROFESSIONAL CLOSING -->
+<section class="closing-section">
+
+    <p class="closing-text">
+        Focused on becoming a skilled Software Engineer through continuous learning,
+        hands-on development, and building impactful real-world solutions.
+
+        I am currently open to part-time and student opportunities (Werkstudent).
+
+        If you are interested in my profile or would like to connect,
+        feel free to contact me through email or LinkedIn.
+    </p>
+
 </section>
 
 <footer>
