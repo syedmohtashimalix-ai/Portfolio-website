@@ -43,7 +43,7 @@ body{
 header{
     width:100%;
     padding:20px 8%;
-    background:#0a0a0a;
+    background:#120909;
     position:sticky;
     top:0;
     z-index:1000;
@@ -78,6 +78,7 @@ nav a:hover{
     align-items:center;
     padding:60px 8%;
     gap:40px;
+    transform:translateY(-10px);
 }
 
 .hero-text{
@@ -100,31 +101,21 @@ nav a:hover{
     color:#dcdcdc;
 }
 
-/* =========================
-   CV BADGE (UNDER TEXT)
-========================= */
+/* CV BADGE */
 .cv-badge{
-    margin-top:18px;
     display:inline-flex;
     align-items:center;
-    gap:8px;
-
-    padding:6px 12px;
-
+    gap:6px;
+    margin-top:15px;
+    padding:6px 10px;
     font-size:12px;
     font-weight:600;
-
     color:#00bfff;
-    background:rgba(0,191,255,0.12);
-
+    background:rgba(0,191,255,0.1);
     border:1px solid #00bfff;
     border-radius:20px;
-
     text-decoration:none;
-
-    box-shadow:0 0 12px rgba(0,191,255,0.25);
-
-    transition:0.3s ease;
+    transition:0.3s;
 }
 
 .cv-badge:hover{
@@ -133,9 +124,7 @@ nav a:hover{
     transform:scale(1.05);
 }
 
-/* =========================
-   HERO IMAGE
-========================= */
+/* IMAGE */
 .hero-image{
     width:335px;
     height:335px;
@@ -164,9 +153,7 @@ section{
     color:#00bfff;
 }
 
-/* =========================
-   CARDS (ALL SAME STYLE)
-========================= */
+/* CARDS */
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -176,19 +163,15 @@ section{
 .card{
     background:rgba(255,255,255,0.05);
     border:1px solid rgba(0,191,255,0.3);
-
     padding:30px;
     border-radius:12px;
-
+    transition:0.3s;
     box-shadow:0 8px 18px rgba(0,191,255,0.15);
-
-    transition:0.3s ease;
 }
 
 .card:hover{
     transform:translateY(-8px);
     box-shadow:0 12px 28px rgba(0,191,255,0.3);
-    border-color:#00bfff;
 }
 
 .card h3{
@@ -196,17 +179,13 @@ section{
     margin-bottom:15px;
 }
 
-/* =========================
-   CONTACT LINKS
-========================= */
+/* CONTACT */
 .contact-card a{
     display:flex;
     align-items:center;
     gap:8px;
-
     color:#fff;
     text-decoration:none;
-
     padding:6px 0;
 }
 
@@ -214,9 +193,7 @@ section{
     color:#00bfff;
 }
 
-/* =========================
-   SKILLS
-========================= */
+/* SKILLS */
 .skill{
     margin-bottom:25px;
 }
@@ -240,13 +217,11 @@ section{
     background:#00bfff;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 footer{
     text-align:center;
     padding:40px;
-    background:#0a0a0a;
+    background:#120909;
     color:#dcdcdc;
 }
 </style>
@@ -254,6 +229,7 @@ footer{
 
 <body>
 
+<!-- MATRIX BACKGROUND -->
 <canvas id="matrix"></canvas>
 
 <header>
@@ -275,18 +251,21 @@ footer{
         <h2>Syed Mohtashim Ali</h2>
 
         <p>
-            I am a Software Engineering student at GISMA University in Berlin. I love web development, AI tools, and building digital projects.
+            I am a first-semester Bachelor’s student in Software Engineering at <b>GISMA University of Applied Sciences</b> in Berlin.  
+            I am an open-minded, positive, and motivated individual with a strong interest in software engineering, web development, AI tools, and project management.  
+
+            I enjoy building creative websites and learning modern technologies. Alongside my education, I also have practical experience in hospitality management, customer communication, teamwork, and technical support.  
+
+            My goal is to become a skilled software engineer and continuously improve my knowledge while building innovative digital projects for the future.
         </p>
 
-        <!-- CV BADGE -->
         <a class="cv-badge" href="cv.pdf" target="_blank">
-            <i class="fa-solid fa-file-arrow-down"></i>
-            View CV
+            <i class="fa-solid fa-file-arrow-down"></i> CV
         </a>
     </div>
 
     <div class="hero-image">
-        <img src="profile.jpg" alt="Profile">
+        <img src="profile.jpg" alt="Profile Photo">
     </div>
 
 </section>
@@ -297,11 +276,19 @@ footer{
 
     <div class="cards">
         <div class="card contact-card">
-            <h3>Contact Info</h3>
+            <h3>Contact Information</h3>
 
-            <a href="mailto:test@mail.com"><i class="fa-solid fa-envelope"></i>Email</a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
-            <a href="#"><i class="fa-brands fa-github"></i>GitHub</a>
+            <a href="mailto:test@email.com">
+                <i class="fa-solid fa-envelope"></i>Email
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-linkedin"></i>LinkedIn
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-github"></i>GitHub
+            </a>
         </div>
     </div>
 </section>
@@ -309,10 +296,11 @@ footer{
 <!-- EDUCATION -->
 <section id="education">
     <h2 class="section-title">Education</h2>
+
     <div class="cards">
         <div class="card">
             <h3>GISMA University</h3>
-            <p>Software Engineering (Berlin)</p>
+            <p>Bachelor Software Engineering – First Semester</p>
         </div>
     </div>
 </section>
@@ -320,9 +308,10 @@ footer{
 <!-- SKILLS -->
 <section id="skills">
     <h2 class="section-title">Skills</h2>
+
     <div class="cards">
         <div class="card">
-            <p>HTML, CSS, Python, AI Tools</p>
+            <p>HTML, CSS, Python, AI Tools, Teamwork, Project Management</p>
         </div>
     </div>
 </section>
@@ -330,10 +319,11 @@ footer{
 <!-- EXPERIENCE -->
 <section id="experience">
     <h2 class="section-title">Experience</h2>
+
     <div class="cards">
         <div class="card">
             <h3>Hotel Night Auditor</h3>
-            <p>1.5 years experience in hospitality</p>
+            <p>1.5 years experience in hospitality, customer service, and operations.</p>
         </div>
     </div>
 </section>
@@ -341,19 +331,21 @@ footer{
 <!-- PROJECTS -->
 <section id="projects">
     <h2 class="section-title">Projects</h2>
+
     <div class="cards">
         <div class="card">
             <h3>Essay Project</h3>
-            <p>Academic writing work</p>
+            <p>Academic writing and research project.</p>
         </div>
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-    <p>Thank you for visiting my portfolio</p>
+    <p>Thank you for visiting my portfolio. I am continuously learning and improving.</p>
 </footer>
 
-<!-- MATRIX JS -->
+<!-- MATRIX SCRIPT -->
 <script>
 const canvas = document.getElementById("matrix");
 const ctx = canvas.getContext("2d");
