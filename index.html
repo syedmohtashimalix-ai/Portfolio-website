@@ -1,1 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#070707;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+.background-animation{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    overflow:hidden;
+}
+
+.background-animation span{
+    position:absolute;
+    display:block;
+    width:25px;
+    height:25px;
+    background:rgba(0,255,100,0.1);
+    border:1px solid rgba(255,255,255,0.1);
+    animation:animate 15s linear infinite;
+}
+
+.background-animation span:nth-child(1){left:10%; animation-duration:20s; top:20%;}
+.background-animation span:nth-child(2){left:70%; animation-duration:12s; top:60%;}
+.background-animation span:nth-child(3){left:40%; animation-duration:18s; top:80%;}
+.background-animation span:nth-child(4){left:85%; animation-duration:14s; top:30%;}
+.background-animation span:nth-child(5){left:20%; animation-duration:10s; top:50%;}
+
+@keyframes animate{
+    0%{transform:translateY(0) rotate(0deg); opacity:0;}
+    50%{opacity:1;}
+    100%{transform:translateY(-1000px) rotate(360deg); opacity:0;}
+}
+
+header{
+    width:100%;
+    padding:20px 8%;
+    background:#120909;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid rgba(0,255,100,0.2);
+}
+
+header h1{
+    color:#ffffff;
+    letter-spacing:2px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#ffffff;
+    margin-left:20px;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#00ff88;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 8%;
+    gap:40px;
+}
+
+.hero-text{
+    width:60%;
+}
+
+.hero-text h2{
+    font-size:60px;
+    margin-bottom:20px;
+    color:#ffffff;
+}
+
+.hero-text p{
+    font-size:18px;
+    line-height:1.8;
+    color:#dcdcdc;
+}
+
+.hero-image{
+    width:320px;
+    height:320px;
+    border:3px solid #00ff88;
+    box-shadow:0 0 25px rgba(0,255,120,0.4);
+    overflow:hidden;
+}
+
+.hero-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:50px;
+    color:white;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1a0d0d;
+    border:1px solid rgba(0,255,100,0.2);
+    padding:30px;
+    border-radius:18px;
+    transition:0.4s;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(0,255,100,0.2);
+}
+
+.card h3{
+    color:#00ff88;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.card p{
+    color:#dcdcdc;
+    line-height:1.7;
+}
+
+.contact-card a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin:15px 0;
+    transition:0.3s;
+}
+
+.contact-card a:hover{
+    color:#00ff88;
+}
+
+.download-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#00ff88;
+    color:black;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.download-btn:hover{
+    background:white;
+}
+
+.skill{
+    margin-bottom:25px;
+}
+
+.skill-name{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:8px;
+}
+
+.progress{
+    width:100%;
+    height:12px;
+    background:#2b2b2b;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+    background:#00ff88;
+}
+
+.languages{
+    text-align:center;
+}
+
+.languages p{
+    margin:15px 0;
+    font-size:20px;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:#120909;
+    color:#dcdcdc;
+    border-top:1px solid rgba(0,255,100,0.2);
+}
+
+@media(max-width:900px){
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .hero-text{
+        width:100%;
+    }
+
+    .hero-text h2{
+        font-size:40px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="background-animation">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<header>
+    <h1>My Portfolio</h1>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+    </nav>
+</header>
+
+<section class="hero" id="about">
+
+    <div class="hero-text">
+        <h2>Your Name Here</h2>
+
+        <p>
+            I am a first semester bachelor degree student with a strong interest in software engineering, web development, AI tools, and project management. I enjoy building creative websites and learning modern technologies. Alongside my education, I have practical professional experience in hospitality management, customer communication, teamwork, and technical support. My goal is to continuously improve my technical knowledge while building innovative digital projects for the future.
+        </p>
+    </div>
+
+    <div class="hero-image">
+        <img src="your-photo.jpg" alt="Profile Photo">
+    </div>
+
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="cards">
+        <div class="card contact-card">
+            <h3>Contact Information</h3>
+
+            <a href="mailto:your-email@example.com">
+                <i class="fa-solid fa-envelope"></i> Your Email Address
+            </a>
+
+            <a href="https://linkedin.com" target="_blank">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
+            </a>
+
+            <a href="https://github.com" target="_blank">
+                <i class="fa-brands fa-github"></i> GitHub Profile
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-location-dot"></i> Your Address
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="education">
+    <h2 class="section-title">Education Background</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Education Title 1</h3>
+            <p>
+                Add your education information here including institution name, degree details, achievements, and study information.
+            </p>
+            <a href="education1.pdf" class="download-btn" download>
+                Download PDF
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Education Title 2</h3>
+            <p>
+                Add your education information here including institution name, degree details, achievements, and study information.
+            </p>
+            <a href="education2.pdf" class="download-btn" download>
+                Download PDF
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Education Title 3</h3>
+            <p>
+                Add your education information here including institution name, degree details, achievements, and study information.
+            </p>
+            <a href="education3.pdf" class="download-btn" download>
+                Download PDF
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section id="subeducation">
+    <h2 class="section-title">Additional Education</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Certificate / Course</h3>
+            <p>
+                Add your certifications, online courses, workshops, and additional educational achievements here.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Training Program</h3>
+            <p>
+                Add your training details and educational experiences here.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="languages">
+    <h2 class="section-title">Languages</h2>
+
+    <div class="card languages">
+        <p><strong>Native Language:</strong> Urdu</p>
+        <p><strong>English Level:</strong> C1</p>
+        <p><strong>German Level:</strong> B1</p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">Software Engineering Skills</h2>
+
+    <div class="cards">
+        <div class="card">
+
+            <div class="skill">
+                <div class="skill-name">
+                    <span>Python</span>
+                    <span>20%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" style="width:20%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">
+                    <span>HTML & CSS</span>
+                    <span>30%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" style="width:30%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">
+                    <span>GitHub</span>
+                    <span>30%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" style="width:30%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">
+                    <span>AI Tools</span>
+                    <span>50%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" style="width:50%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">
+                    <span>Project Management</span>
+                    <span>30%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" style="width:30%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">
+                    <span>Team Work</span>
+                    <span>100%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" style="width:100%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">
+                    <span>IT Support</span>
+                    <span>30%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" style="width:30%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">
+                    <span>Writing & Presentation</span>
+                    <span>65%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" style="width:65%"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="experience">
+    <h2 class="section-title">Experience</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Dishwasher Assistant</h3>
+            <p>
+                Worked for one month in dishwashing operations where responsibilities included kitchen cleaning, maintaining hygiene standards, teamwork, time management, and supporting restaurant staff during busy hours.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Night Auditor – Hotel Front Office</h3>
+            <p>
+                Currently working for 1.5 years as a Night Auditor in hotel front office operations. Responsibilities include guest check-in and check-out, customer communication, financial reporting, reservation handling, administrative support, night operations management, problem-solving, and teamwork in a professional hospitality environment.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Essay Writing Project</h3>
+            <p>
+                Academic essay writing project focused on professional research, analytical thinking, and academic presentation.
+            </p>
+
+            <a href="essay-project.pdf" class="download-btn" download>
+                Open Project PDF
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Research Project</h3>
+            <p>
+                Research project related to business studies, software engineering, and modern technolo
