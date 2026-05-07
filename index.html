@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Syed Mohtashim Ali | Portfolio</title>
+<title>Luxury Portfolio</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-
 /* =========================
-   RESET
+   GLOBAL RESET
 ========================= */
 *{
     margin:0;
@@ -21,18 +20,33 @@
 }
 
 body{
-    background:#000;
+    background:#050b14; /* darker for readability */
     color:white;
     overflow-x:hidden;
 }
 
 /* =========================
-   BLUE MATRIX BACKGROUND
+   MATRIX BACKGROUND (DARK BLUE)
 ========================= */
-canvas{
+#matrix{
     position:fixed;
     top:0;
     left:0;
+    width:100%;
+    height:100%;
+    z-index:-2;
+    opacity:0.25; /* 🔥 darker so text readable */
+}
+
+/* dark overlay for readability */
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,20,0.65);
     z-index:-1;
 }
 
@@ -42,42 +56,43 @@ canvas{
 header{
     width:100%;
     padding:18px 8%;
-    background:rgba(10,10,20,0.85);
-    backdrop-filter: blur(10px);
+    background:rgba(10,15,30,0.85);
     position:sticky;
     top:0;
     z-index:1000;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    border-bottom:1px solid rgba(0,170,255,0.25);
+    border-bottom:1px solid rgba(0,180,255,0.2);
+    backdrop-filter: blur(10px);
 }
 
 header h1{
-    color:#00aaff;
+    font-size:22px;
+    color:#00c8ff;
 }
 
 nav a{
-    color:white;
     text-decoration:none;
+    color:white;
     margin-left:18px;
     font-weight:bold;
     transition:0.3s;
 }
 
 nav a:hover{
-    color:#00aaff;
+    color:#00c8ff;
 }
 
 /* =========================
-   HERO SECTION
+   HERO (UNCHANGED STYLE)
 ========================= */
 .hero{
     min-height:100vh;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:80px 8%;
+    padding:70px 8%;
     gap:40px;
 }
 
@@ -87,52 +102,42 @@ nav a:hover{
 }
 
 .hero-text h2{
-    font-size:55px;
-    color:#00aaff;
+    font-size:60px;
+    color:#00c8ff;
     margin-bottom:20px;
 }
 
 .hero-text p{
-    font-size:17px;
+    font-size:18px;
     line-height:1.8;
     color:#dcdcdc;
 }
 
-/* =========================
-   CV UNDER TEXT (IMPORTANT FIX)
-========================= */
-.cv-box{
-    margin-top:20px;
-}
-
+/* CV under text */
 .cv-btn{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
+    display:inline-block;
+    margin-top:18px;
     padding:10px 18px;
-    border:1px solid #00aaff;
-    color:#00aaff;
-    border-radius:25px;
+    background:#00c8ff;
+    color:black;
+    border-radius:8px;
+    font-weight:bold;
     text-decoration:none;
-    font-size:13px;
     transition:0.3s;
 }
 
 .cv-btn:hover{
-    background:#00aaff;
-    color:#000;
+    background:white;
 }
 
-/* =========================
-   PROFILE IMAGE (BIGGER + CLEAN)
-========================= */
+/* HERO IMAGE BIGGER */
 .hero-image{
-    width:340px;
-    height:340px;
-    border-radius:20px;
+    width:360px;
+    height:360px;
+    border-radius:15px;
     overflow:hidden;
-    border:3px solid #00aaff;
-    box-shadow:0 0 30px rgba(0,170,255,0.4);
+    border:3px solid #00c8ff;
+    box-shadow:0 0 25px rgba(0,200,255,0.4);
 }
 
 .hero-image img{
@@ -145,74 +150,54 @@ nav a:hover{
    SECTIONS
 ========================= */
 section{
-    padding:80px 8%;
+    padding:70px 8%;
 }
 
 .section-title{
     text-align:center;
     font-size:40px;
-    margin-bottom:50px;
-    color:#00aaff;
+    margin-bottom:40px;
+    color:#00c8ff;
 }
 
 /* =========================
-   CARDS
+   CARDS (MODERN GLASS STYLE)
 ========================= */
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
 }
 
 .card{
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(0,170,255,0.2);
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(0,200,255,0.2);
     padding:25px;
-    border-radius:14px;
+    border-radius:16px;
     transition:0.3s;
+    backdrop-filter: blur(10px);
 }
 
 .card:hover{
     transform:translateY(-8px);
-    box-shadow:0 0 25px rgba(0,170,255,0.25);
+    box-shadow:0 0 25px rgba(0,200,255,0.25);
 }
 
 .card h3{
-    color:#00aaff;
-    margin-bottom:12px;
+    color:#00c8ff;
+    margin-bottom:10px;
 }
 
 /* =========================
-   CONTACT CARD (BIGGER + CLEAR)
+   CONTACT (CLOSE TO HERO)
 ========================= */
+#contact{
+    padding-top:20px;   /* 🔥 very close to hero */
+}
+
 .contact-card{
-    max-width:420px;
+    max-width:320px;
     margin:auto;
-    padding:18px;
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(0,170,255,0.3);
-    border-radius:14px;
-    box-shadow:0 8px 20px rgba(0,170,255,0.15);
-}
-
-.contact-card h3{
-    text-align:center;
-    margin-bottom:15px;
-    color:#00aaff;
-}
-
-.contact-card a{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    padding:8px 0;
-    color:white;
-    text-decoration:none;
-    font-size:15px;
-}
-
-.contact-card a:hover{
-    color:#00aaff;
 }
 
 /* =========================
@@ -231,14 +216,14 @@ section{
 .progress{
     width:100%;
     height:10px;
-    background:#222;
+    background:#1c1c1c;
     border-radius:10px;
     overflow:hidden;
 }
 
 .progress-bar{
     height:100%;
-    background:#00aaff;
+    background:#00c8ff;
 }
 
 /* =========================
@@ -247,9 +232,32 @@ section{
 footer{
     text-align:center;
     padding:35px;
-    background:#0a0a14;
-    border-top:1px solid rgba(0,170,255,0.2);
-    color:#ccc;
+    background:rgba(10,15,30,0.9);
+    color:#aaa;
+    border-top:1px solid rgba(0,200,255,0.2);
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media(max-width:900px){
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .hero-text{
+        width:100%;
+    }
+
+    .hero-text h2{
+        font-size:40px;
+    }
+
+    .hero-image{
+        width:280px;
+        height:280px;
+    }
 }
 
 </style>
@@ -257,13 +265,15 @@ footer{
 
 <body>
 
+<!-- MATRIX BACKGROUND -->
 <canvas id="matrix"></canvas>
 
 <header>
-    <h1>Portfolio</h1>
+    <h1>My Portfolio</h1>
     <nav>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
+        <a href="#education">Education</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
@@ -274,25 +284,18 @@ footer{
 <section class="hero" id="about">
 
     <div class="hero-text">
-
         <h2>Syed Mohtashim Ali</h2>
 
         <p>
-I am a first-semester Bachelor’s student in Software Engineering at GISMA University of Applied Sciences in Berlin. I am an open-minded, happy, and motivated individual with a strong interest in software engineering, web development, AI tools, and project management.
+            I am a first-semester Bachelor’s student at <b>GISMA University of Applied Sciences</b> in Berlin, studying Software Engineering.  
+            I am an open-minded and motivated student with strong interest in software engineering, web development, AI tools, and project management.  
 
-I enjoy building creative websites and learning modern technologies. Alongside my studies, I have practical experience in hospitality management, customer communication, teamwork, and technical support.
+            I enjoy building creative websites and learning modern technologies. Alongside my studies, I have experience in hospitality management, customer communication, teamwork, and technical support.  
 
-My goal is to become a skilled software engineer and continuously grow while building innovative digital projects for the future.
+            My goal is to become a skilled software engineer and build innovative digital solutions in the future.
         </p>
 
-        <!-- CV UNDER TEXT -->
-        <div class="cv-box">
-            <a class="cv-btn" href="cv.pdf" target="_blank">
-                <i class="fa-solid fa-file-arrow-down"></i>
-                Download CV
-            </a>
-        </div>
-
+        <a class="cv-btn" href="cv.pdf" target="_blank">Download CV</a>
     </div>
 
     <div class="hero-image">
@@ -303,94 +306,78 @@ My goal is to become a skilled software engineer and continuously grow while bui
 
 <!-- CONTACT -->
 <section id="contact">
-
     <h2 class="section-title">Contact</h2>
 
-    <div class="contact-card">
-
+    <div class="card contact-card">
         <h3>Get In Touch</h3>
-
-        <a href="mailto:your@email.com">
-            <i class="fa-solid fa-envelope"></i> Email
-        </a>
-
-        <a href="https://linkedin.com">
-            <i class="fa-brands fa-linkedin"></i> LinkedIn
-        </a>
-
-        <a href="https://github.com">
-            <i class="fa-brands fa-github"></i> GitHub
-        </a>
-
-        <a href="#">
-            <i class="fa-solid fa-location-dot"></i> Berlin, Germany
-        </a>
-
+        <p>Email: your-email@example.com</p>
+        <p>LinkedIn: linkedin.com</p>
+        <p>GitHub: github.com</p>
     </div>
+</section>
 
+<!-- EDUCATION -->
+<section id="education">
+    <h2 class="section-title">Education</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>GISMA University</h3>
+            <p>Bachelor in Software Engineering (1st Semester)</p>
+        </div>
+    </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-
     <h2 class="section-title">Skills</h2>
 
     <div class="cards">
-
         <div class="card">
-            <h3>Technical Skills</h3>
-
-            <p>HTML / CSS</p>
-            <div class="progress"><div class="progress-bar" style="width:75%"></div></div>
-
-            <p>Python</p>
-            <div class="progress"><div class="progress-bar" style="width:55%"></div></div>
-
-            <p>AI Tools</p>
-            <div class="progress"><div class="progress-bar" style="width:60%"></div></div>
-
+            <p>HTML, CSS, Python, GitHub, AI Tools, Teamwork</p>
         </div>
-
     </div>
-
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
-
     <h2 class="section-title">Experience</h2>
 
     <div class="cards">
-
         <div class="card">
-            <h3>Hospitality Experience</h3>
-            <p>Experience in hotel night auditing, customer service, teamwork, and administrative support.</p>
+            <h3>Hotel Night Auditor</h3>
+            <p>1.5 years experience in hospitality and customer service.</p>
         </div>
 
+        <div class="card">
+            <h3>Kitchen Assistant</h3>
+            <p>Teamwork, hygiene, and fast-paced environment experience.</p>
+        </div>
     </div>
-
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-
     <h2 class="section-title">Projects</h2>
 
     <div class="cards">
-
         <div class="card">
             <h3>Portfolio Website</h3>
-            <p>Fully responsive personal portfolio built using HTML, CSS, and animations.</p>
+            <p>Modern responsive personal website built with HTML & CSS.</p>
         </div>
 
+        <div class="card">
+            <h3>Research Project</h3>
+            <p>Academic research in technology and software development.</p>
+        </div>
     </div>
-
 </section>
 
 <footer>
-    <p>© 2026 Syed Mohtashim Ali | All Rights Reserved</p>
+    <p>© 2026 Syed Mohtashim Ali | Built with passion 🚀</p>
 </footer>
 
+<!-- MATRIX SCRIPT -->
 <script>
 const canvas = document.getElementById("matrix");
 const ctx = canvas.getContext("2d");
@@ -405,20 +392,18 @@ let columns = canvas.width / fontSize;
 let drops = Array(Math.floor(columns)).fill(1);
 
 function draw(){
-    ctx.fillStyle="rgba(0,0,0,0.05)";
+    ctx.fillStyle = "rgba(0,0,0,0.05)";
     ctx.fillRect(0,0,canvas.width,canvas.height);
 
-    ctx.fillStyle="#00aaff";
-    ctx.font=fontSize+"px monospace";
+    ctx.fillStyle = "#00c8ff";
 
     for(let i=0;i<drops.length;i++){
         let text = letters[Math.floor(Math.random()*letters.length)];
-        ctx.fillText(text,i*fontSize,drops[i]*fontSize);
+        ctx.fillText(text, i*fontSize, drops[i]*fontSize);
 
         if(drops[i]*fontSize > canvas.height){
             drops[i]=0;
         }
-
         drops[i]++;
     }
 }
