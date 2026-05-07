@@ -189,19 +189,72 @@ section{
 }
 
 /* =========================
-   CONTACT (CLOSE TO HERO)
+   CONTACT MASTER CONTROL (IMPORTANT)
 ========================= */
-/* CONTACT SECTION - MOVE CLOSER TO HERO */
-#contact{
-    padding-top:20px;   /* bring it closer */
-    margin-top:-30px;   /* pulls it upward toward intro */
-    display:flex;
-    justify-content:center;
+.contact-section{
+    /* 🔥 MOVE WHOLE CONTACT SECTION UP/DOWN */
+    margin-top: -40px;
 }
 
 /* =========================
-   SKILLS
+   CONTROL BOX (MOVE ANYWHERE)
 ========================= */
+.contact-move{
+
+    /* 🔥 LEFT / RIGHT CONTROL */
+    transform: translateX(0px);
+
+    /* 🔥 UP / DOWN CONTROL (extra fine tuning) */
+    transform: translateY(0px);
+
+    /* OPTIONAL: scale size */
+    scale: 1;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* =========================
+   CONTACT BOX SIZE CONTROL
+========================= */
+.contact-card{
+    width: 450px;        /* 🔥 WIDTH CONTROL */
+    min-height: 300px;   /* 🔥 HEIGHT CONTROL */
+
+    padding: 20px;
+    border-radius: 14px;
+
+    background: rgba(0,0,0,0.45);
+    border: 1px solid rgba(0,255,200,0.25);
+
+    box-shadow: 0 0 25px rgba(0,255,200,0.15);
+    backdrop-filter: blur(10px);
+}
+
+/* =========================
+   CONTACT ITEMS
+========================= */
+.contact-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.contact-item i{
+    color: #00ff88;
+    width: 20px;
+}
+
+.contact-item a,
+.contact-item span{
+    color: white;
+    text-decoration: none;
+}
+
+.contact-item a:hover{
+    color: #00ff88;
+}
 .skill{
     margin-bottom:20px;
 }
@@ -303,15 +356,39 @@ footer{
 
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="contact-section">
     <h2 class="section-title">Contact</h2>
 
-    <div class="card contact-card">
-        <h3>Get In Touch</h3>
-        <p>Email: your-email@example.com</p>
-        <p>LinkedIn: linkedin.com</p>
-        <p>GitHub: github.com</p>
+    <div class="contact-move">
+
+        <div class="card contact-card">
+
+            <h3>Contact Information</h3>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:your-email@example.com">your-email@example.com</a>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-brands fa-linkedin"></i>
+                <a href="#">LinkedIn</a>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-brands fa-github"></i>
+                <a href="#">GitHub</a>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Berlin, Germany</span>
+            </div>
+
+            <a class="cv-btn" href="cv.pdf" target="_blank">Download CV</a>
+
+        </div>
+
     </div>
 </section>
 
