@@ -180,45 +180,138 @@ section{
     color:#00ff88;
 }
 
-/* CV CARD FIXED */
-.cv-card{
-    margin-top:18px;
-    padding:12px 16px;
-    max-width:190px;
-    background:#0f1f16;
-    border:1px solid #00ff88;
-    border-radius:10px;
-    text-align:center;
-    box-shadow:0 0 18px rgba(0,255,136,0.25);
+<!-- CV BUTTON (UNDER TEXT) -->
+    <a class="btn hero-cv" href="cv.pdf" target="_blank">
+        View CV
+    /* VIEW CV BUTTON */
+.hero .btn {
+    margin-top: 0;
+    align-self: center; /* 🔥 THIS FIXES LEFT ISSUE */
 }
 
-.cv-card h3{
-    font-size:14px;
-    color:#00ff88;
+#projects .badge {
+    font-size: 11px;
+    padding: 3px 8px;
 }
 
-.cv-card p{
-    font-size:11px;
-    color:#ccc;
-    margin:6px 0;
+/* =========================
+   CONTACT WRAPPER (CLOSE TO CV)
+========================= */
+#contact {
+    display: flex;
+    justify-content: center;
+    margin-top: -20px; /* your spacing control */
+}
+/* =========================
+   CONTACT CARD
+========================= */
+.contact-card {
+    max-width: 300px;   /* 🔥 smaller box */
+    width: 100%;
+
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(0,247,255,0.2);
+
+    border-radius: 12px;
+
+    padding: 10px 12px;  /* 🔥 reduce height */
+    gap: 6px;            /* tighter spacing */
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 8px 18px rgba(0,247,255,0.12);
 }
 
-.cv-btn{
-    display:inline-block;
-    margin-top:8px;
-    padding:7px 12px;
-    font-size:11px;
-    background:#00ff88;
-    color:black;
-    text-decoration:none;
-    border-radius:6px;
-    font-weight:bold;
+/* =========================
+   TITLE
+========================= */
+.contact-card h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #00f7ff;
 }
 
-.cv-btn:hover{
-    background:white;
+/* =========================
+   CONTACT ROW (FIXED ALIGNMENT)
+========================= */
+.contact-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 4px 0;
 }
 
+/* LABEL COLUMN */
+.contact-item span {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+
+    width: 70px;        /* 🔥 tighter = closer text */
+    flex-shrink: 0;
+}
+
+/* VALUE COLUMN */
+.contact-item a {
+    color: #00f7ff;
+    font-weight: 500;
+    text-decoration: none;
+
+    flex: 1;
+    text-align: left;
+    word-break: break-word;
+}
+
+.contact-item a:hover {
+    color: #00ff88;
+}
+
+/* =========================
+   OPEN TO BADGE
+========================= */
+.open-badge {
+    display: inline-block;
+
+    padding: 5px 10px;
+    margin: 4px 0;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    color: #00ff88;
+    background: rgba(0,255,136,0.12);
+    border: 1px solid #00ff88;
+
+    border-radius: 20px;
+
+    box-shadow: 0 0 10px rgba(0,255,136,0.15);
+}
+
+/* =========================
+   CV BUTTON
+========================= */
+.contact-card .btn {
+    margin-top: 6px;
+    align-self: flex-start;
+}
+
+.closing-section {
+    padding: 70px 20px;
+}
+
+.closing-text {
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+    max-width: 750px;
+    margin: auto;
+
+    font-size: 15px;
+    line-height: 1.9;
+    letter-spacing: 0.3px;
+}
 /* SKILLS */
 .skill{
     margin-bottom:25px;
@@ -285,6 +378,12 @@ footer{
 I am a first-semester Bachelor’s student in Software Engineering at GISMA University of Applied Sciences in Berlin. I am an open-minded and motivated individual with a strong interest in software engineering, web development, AI tools, and project management. I enjoy building creative software, web applications, and digital solutions while continuously learning modern technologies. My goal is to become a skilled software engineer and contribute to innovative digital projects in the future.
         </p>
     </div>
+    <!-- CV BUTTON (UNDER TEXT) -->
+    <a class="btn hero-cv" href="cv.pdf" target="_blank">
+        View CV
+    </a>
+
+</div>
 
     <div class="hero-image">
         <img src="profile.jpg" alt="Profile Photo">
