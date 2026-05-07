@@ -310,6 +310,7 @@ footer{
         width:280px;
         height:280px;
     }
+   
 }
    #education .card{
     text-align:center;
@@ -329,6 +330,33 @@ footer{
     color:#d6d6d6;
 }
 
+   .progress{
+    width:100%;
+    height:12px;
+    background:#111827;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:5px;
+}
+
+.progress-bar{
+    height:100%;
+    background:linear-gradient(90deg,#00c8ff,#00ffcc);
+    border-radius:20px;
+    box-shadow:0 0 12px rgba(0,200,255,0.5);
+}
+
+.skill{
+    margin-bottom:25px;
+}
+
+.skill-name{
+    display:flex;
+    justify-content:space-between;
+    font-size:15px;
+    margin-bottom:8px;
+}
+   
 </style>
 </head>
 
@@ -432,17 +460,67 @@ footer{
 
     </div>
 </section>
+   
 <!-- SKILLS -->
 <section id="skills">
     <h2 class="section-title">Skills</h2>
 
     <div class="cards">
+
         <div class="card">
-            <p>HTML, CSS, Python, GitHub, AI Tools, Teamwork</p>
+
+            <!-- HTML -->
+            <div class="skill">
+                <div class="skill-name">
+                    <span>HTML</span>
+                    <span>30%</span>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width:30%;"></div>
+                </div>
+            </div>
+
+            <!-- Python -->
+            <div class="skill">
+                <div class="skill-name">
+                    <span>Python</span>
+                    <span>20%</span>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width:20%;"></div>
+                </div>
+            </div>
+
+            <!-- AI -->
+            <div class="skill">
+                <div class="skill-name">
+                    <span>AI Tools</span>
+                    <span>50%</span>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width:50%;"></div>
+                </div>
+            </div>
+
+            <!-- Teamwork -->
+            <div class="skill">
+                <div class="skill-name">
+                    <span>Teamwork</span>
+                    <span>100%</span>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width:100%;"></div>
+                </div>
+            </div>
+
         </div>
+
     </div>
 </section>
-
 <!-- EXPERIENCE -->
 <section id="experience">
     <h2 class="section-title">Experience</h2>
