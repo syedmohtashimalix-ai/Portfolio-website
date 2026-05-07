@@ -36,14 +36,14 @@ https://your-username.github.io/portfolio
 ---
 
 ## 📂 Project Structure
-portfolio/
+$ portfolio
 │
 ├── index.html
 ├── style.css
 ├── script.js
 │
 ├── assets/
-│   ├── profile.jpg
+│   └── profile.jpg
 │
 ├── documents/
 │   ├── cv.pdf
@@ -52,8 +52,6 @@ portfolio/
 │   └── blockchain.pdf
 │
 └── README.md
-
-
 
 ---
 
