@@ -346,15 +346,69 @@ footer{
     box-shadow:0 0 12px rgba(0,200,255,0.5);
 }
 
-.skill{
-    margin-bottom:25px;
+/* =========================
+   SKILL CARD PREMIUM STYLE
+========================= */
+.skill-card{
+    max-width: 320px;
+    margin: auto;
+
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(0,247,255,0.2);
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    box-shadow: 0 8px 18px rgba(0,247,255,0.12);
+
+    transition: 0.3s ease;
 }
 
-.skill-name{
+.skill-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0,247,255,0.25);
+}
+
+/* TOP ROW */
+.skill-top{
     display:flex;
     justify-content:space-between;
-    font-size:15px;
-    margin-bottom:8px;
+    align-items:center;
+
+    margin-bottom:12px;
+}
+
+.skill-top h3{
+    color:#ffffff;
+    font-size:16px;
+}
+
+.skill-top span{
+    color:#00f7ff;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* PROGRESS BAR */
+.progress{
+    width:100%;
+    height:10px;
+
+    background:#111827;
+
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+
+    background:linear-gradient(90deg,#00c8ff,#00ff88);
+
+    border-radius:20px;
+
+    box-shadow:0 0 12px rgba(0,247,255,0.4);
 }
    
 </style>
@@ -462,64 +516,70 @@ footer{
 </section>
    
 <!-- SKILLS -->
+<!-- SKILLS -->
 <section id="skills">
     <h2 class="section-title">Skills</h2>
 
     <div class="cards">
 
-        <div class="card">
+        <!-- HTML -->
+        <div class="card skill-card">
 
-            <!-- HTML -->
-            <div class="skill">
-                <div class="skill-name">
-                    <span>HTML</span>
-                    <span>30%</span>
-                </div>
-
-                <div class="progress">
-                    <div class="progress-bar" style="width:30%;"></div>
-                </div>
+            <div class="skill-top">
+                <h3>HTML</h3>
+                <span>30%</span>
             </div>
 
-            <!-- Python -->
-            <div class="skill">
-                <div class="skill-name">
-                    <span>Python</span>
-                    <span>20%</span>
-                </div>
-
-                <div class="progress">
-                    <div class="progress-bar" style="width:20%;"></div>
-                </div>
+            <div class="progress">
+                <div class="progress-bar" style="width:30%;"></div>
             </div>
 
-            <!-- AI -->
-            <div class="skill">
-                <div class="skill-name">
-                    <span>AI Tools</span>
-                    <span>50%</span>
-                </div>
+        </div>
 
-                <div class="progress">
-                    <div class="progress-bar" style="width:50%;"></div>
-                </div>
+        <!-- Python -->
+        <div class="card skill-card">
+
+            <div class="skill-top">
+                <h3>Python</h3>
+                <span>20%</span>
             </div>
 
-            <!-- Teamwork -->
-            <div class="skill">
-                <div class="skill-name">
-                    <span>Teamwork</span>
-                    <span>100%</span>
-                </div>
+            <div class="progress">
+                <div class="progress-bar" style="width:20%;"></div>
+            </div>
 
-                <div class="progress">
-                    <div class="progress-bar" style="width:100%;"></div>
-                </div>
+        </div>
+
+        <!-- AI -->
+        <div class="card skill-card">
+
+            <div class="skill-top">
+                <h3>AI Tools</h3>
+                <span>50%</span>
+            </div>
+
+            <div class="progress">
+                <div class="progress-bar" style="width:50%;"></div>
+            </div>
+
+        </div>
+
+        <!-- Teamwork -->
+        <div class="card skill-card">
+
+            <div class="skill-top">
+                <h3>Teamwork</h3>
+                <span>100%</span>
+            </div>
+
+            <div class="progress">
+                <div class="progress-bar" style="width:100%;"></div>
             </div>
 
         </div>
 
     </div>
+
 </section>
 <!-- EXPERIENCE -->
 <section id="experience">
