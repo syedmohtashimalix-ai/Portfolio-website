@@ -629,6 +629,83 @@ footer{
     font-size:14px;
 }
 
+/* =========================
+   LANGUAGE SECTION
+========================= */
+
+.language-card{
+    max-width:320px;
+
+    margin:auto;
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(0,247,255,0.18);
+
+    border-radius:16px;
+
+    padding:20px;
+
+    box-shadow:0 8px 20px rgba(0,247,255,0.08);
+
+    transition:0.35s ease;
+}
+
+.language-card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:0 0 22px rgba(0,247,255,0.22);
+}
+
+/* TOP */
+.language-top{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:14px;
+}
+
+.language-top h3{
+    color:#ffffff;
+
+    font-size:18px;
+}
+
+.language-top span{
+    color:#00f7ff;
+
+    font-size:14px;
+
+    font-weight:600;
+}
+
+/* BAR */
+.progress{
+    width:100%;
+
+    height:10px;
+
+    background:#111827;
+
+    border-radius:20px;
+
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+
+    border-radius:20px;
+
+    background:linear-gradient(90deg,#00c8ff,#00ff88);
+
+    box-shadow:0 0 12px rgba(0,247,255,0.35);
+}
+   
+
 /* SKILLS */
 .skill-text{
     margin-top:8px;
@@ -744,11 +821,14 @@ footer{
     </div>
 </section>
 
+<!-- LANGUAGE -->
 <section id="language">
-    <h2 class="section-title">Language</h2>
+
+    <h2 class="section-title">Languages</h2>
 
     <div class="cards">
 
+        <!-- URDU -->
         <div class="card language-card">
 
             <div class="language-top">
@@ -757,14 +837,12 @@ footer{
             </div>
 
             <div class="progress">
-                <div class="progress-bar" style="width:40%;"></div>
+                <div class="progress-bar" style="width:100%;"></div>
             </div>
 
         </div>
 
-       <div class="cards">
-
-        <!-- HTML -->
+        <!-- ENGLISH -->
         <div class="card language-card">
 
             <div class="language-top">
@@ -773,27 +851,28 @@ footer{
             </div>
 
             <div class="progress">
-                <div class="progress-bar" style="width:40%;"></div>
+                <div class="progress-bar" style="width:65%;"></div>
             </div>
 
         </div>
 
-          <div class="cards">
-
-        <!-- HTML -->
+        <!-- GERMAN -->
         <div class="card language-card">
 
             <div class="language-top">
-                <h3>Germany</h3>
+                <h3>German</h3>
                 <span>50%</span>
             </div>
 
             <div class="progress">
-                <div class="progress-bar" style="width:40%;"></div>
+                <div class="progress-bar" style="width:50%;"></div>
             </div>
 
         </div>
-    </section>
+
+    </div>
+
+</section>
    
 <!-- SKILLS -->
 <section id="skills">
