@@ -36,6 +36,7 @@ https://your-username.github.io/portfolio
 ---
 
 ## 📂 Project Structure
+```bash
 $portfolio
 │
 ├── index.html
