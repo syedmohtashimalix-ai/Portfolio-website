@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luxury Portfolio</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<style>
+/* =========================
+   RESET
+========================= */
 *{
     margin:0;
     padding:0;
@@ -17,42 +10,26 @@
 }
 
 body{
-    background:#070707;
+    background:#000;
     color:white;
     overflow-x:hidden;
 }
 
-/* BACKGROUND */
-.background-animation{
+/* =========================
+   MATRIX BACKGROUND CANVAS
+========================= */
+#matrix{
     position:fixed;
+    top:0;
+    left:0;
     width:100%;
     height:100%;
     z-index:-1;
-    overflow:hidden;
 }
 
-.background-animation span{
-    position:absolute;
-    width:25px;
-    height:25px;
-    background:rgba(0,255,100,0.1);
-    border:1px solid rgba(255,255,255,0.1);
-    animation:animate 15s linear infinite;
-}
-
-.background-animation span:nth-child(1){left:10%; top:20%;}
-.background-animation span:nth-child(2){left:70%; top:60%;}
-.background-animation span:nth-child(3){left:40%; top:80%;}
-.background-animation span:nth-child(4){left:85%; top:30%;}
-.background-animation span:nth-child(5){left:20%; top:50%;}
-
-@keyframes animate{
-    0%{transform:translateY(0) rotate(0deg); opacity:0;}
-    50%{opacity:1;}
-    100%{transform:translateY(-1000px) rotate(360deg); opacity:0;}
-}
-
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 header{
     width:100%;
     padding:20px 8%;
@@ -63,7 +40,7 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    border-bottom:1px solid rgba(0,255,100,0.2);
+    border-bottom:1px solid rgba(0,191,255,0.3);
 }
 
 header h1{
@@ -78,10 +55,12 @@ nav a{
 }
 
 nav a:hover{
-    color:#00ff88;
+    color:#00bfff;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .hero{
     min-height:100vh;
     display:flex;
@@ -89,10 +68,6 @@ nav a:hover{
     align-items:center;
     padding:60px 8%;
     gap:40px;
-}
-
-/* MOVE HERO SLIGHTLY UP */
-.hero{
     transform:translateY(-10px);
 }
 
@@ -107,6 +82,7 @@ nav a:hover{
 .hero-text h2{
     font-size:60px;
     margin-bottom:20px;
+    color:#00bfff;
 }
 
 .hero-text p{
@@ -115,12 +91,48 @@ nav a:hover{
     color:#dcdcdc;
 }
 
-/* PROFILE IMAGE (4% BIGGER) */
+/* =========================
+   CV BADGE
+========================= */
+.cv-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+
+    padding:6px 10px;
+    margin-top:15px;
+
+    font-size:12px;
+    font-weight:600;
+
+    color:#00bfff;
+    background:rgba(0,191,255,0.1);
+
+    border:1px solid #00bfff;
+    border-radius:20px;
+
+    text-decoration:none;
+
+    box-shadow:0 0 12px rgba(0,191,255,0.25);
+
+    transition:0.3s ease;
+}
+
+.cv-badge:hover{
+    background:#00bfff;
+    color:#000;
+    transform:scale(1.05);
+    box-shadow:0 0 18px rgba(0,191,255,0.4);
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
 .hero-image{
     width:335px;
     height:335px;
-    border:3px solid #00ff88;
-    box-shadow:0 0 25px rgba(0,255,120,0.4);
+    border:3px solid #00bfff;
+    box-shadow:0 0 25px rgba(0,191,255,0.4);
     overflow:hidden;
 }
 
@@ -130,7 +142,9 @@ nav a:hover{
     object-fit:cover;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 section{
     padding:80px 8%;
 }
@@ -139,10 +153,12 @@ section{
     text-align:center;
     font-size:42px;
     margin-bottom:50px;
-    color:#00ff88;
+    color:#00bfff;
 }
 
-/* CARDS */
+/* =========================
+   CARDS (UNIFIED STYLE)
+========================= */
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -150,212 +166,82 @@ section{
 }
 
 .card{
-    background:#0f1f16;
-    border:1px solid #00ff88;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(0,191,255,0.3);
+
     padding:30px;
-    border-radius:18px;
-    transition:0.4s;
-    box-shadow:0 0 20px rgba(0,255,136,0.15);
+    border-radius:12px;
+
+    box-shadow:0 8px 18px rgba(0,191,255,0.15);
+
+    transition:0.3s ease;
 }
 
 .card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 30px rgba(0,255,136,0.3);
+    transform:translateY(-8px);
+    box-shadow:0 12px 28px rgba(0,191,255,0.3);
+    border-color:#00bfff;
 }
 
 .card h3{
-    color:#00ff88;
+    color:#00bfff;
     margin-bottom:15px;
 }
 
-/* CONTACT LINKS */
+/* =========================
+   CONTACT LINKS
+========================= */
 .contact-card a{
-    display:block;
-    color:white;
-    margin:12px 0;
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    color:#fff;
     text-decoration:none;
+
+    padding:6px 0;
 }
 
 .contact-card a:hover{
-    color:#00ff88;
-}
-
-<!-- CV BUTTON (UNDER TEXT) -->
-    <a class="btn hero-cv" href="cv.pdf" target="_blank">
-        View CV
-    /* VIEW CV BUTTON */
-.hero .btn {
-    margin-top: 0;
-    align-self: center; /* 🔥 THIS FIXES LEFT ISSUE */
-}
-
-#projects .badge {
-    font-size: 11px;
-    padding: 3px 8px;
-}
-/* =========================
-   CONTACT WRAPPER (FIXED)
-========================= */
-#contact {
-    margin-top: -20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* =========================
-   CONTACT CARD
-========================= */
-.contact-card {
-    max-width: 300px;
-    width: 100%;
-
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(0,247,255,0.2);
-
-    border-radius: 12px;
-
-    padding: 10px 12px;
-
-    display: flex;
-    flex-direction: column;
-
-    box-shadow: 0 8px 18px rgba(0,247,255,0.12);
-}
-
-/* FIXED TITLE (YOU USE h3 IN HTML) */
-.contact-card h3 {
-    margin: 0;
-    font-size: 18px;
-    color: #00f7ff;
-}
-
-/* CONTACT LINKS (BASED ON YOUR CURRENT HTML) */
-.contact-card a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    color: #ffffff;
-    text-decoration: none;
-
-    padding: 6px 0;
-    font-size: 14px;
-}
-
-.contact-card a:hover {
-    color: #00ff88;
-}
-
-/* =========================
-   OPEN TO BADGE
-========================= */
-.open-badge {
-    display: inline-block;
-
-    padding: 5px 10px;
-    margin: 6px 0;
-
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-
-    color: #00ff88;
-    background: rgba(0,255,136,0.12);
-    border: 1px solid #00ff88;
-
-    border-radius: 20px;
-
-    box-shadow: 0 0 10px rgba(0,255,136,0.15);
-}
-
-/* =========================
-   CV BADGE (FINAL)
-========================= */
-.cv-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-
-    padding: 6px 10px;
-
-    font-size: 12px;
-    font-weight: 600;
-
-    color: #00ff88;
-    background: rgba(0, 255, 136, 0.10);
-
-    border: 1px solid #00ff88;
-    border-radius: 20px;
-
-    text-decoration: none;
-
-    box-shadow: 0 0 12px rgba(0, 255, 136, 0.18);
-
-    transition: 0.25s ease;
-}
-
-.cv-badge:hover {
-    background: #00ff88;
-    color: #000;
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 0 18px rgba(0, 255, 136, 0.35);
-}
-
-/* =========================
-   CLOSING SECTION
-========================= */
-.closing-section {
-    padding: 70px 20px;
-}
-
-.closing-text {
-    text-align: center;
-    color: rgba(255,255,255,0.7);
-    max-width: 750px;
-    margin: auto;
-
-    font-size: 15px;
-    line-height: 1.9;
-    letter-spacing: 0.3px;
+    color:#00bfff;
 }
 
 /* =========================
    SKILLS
 ========================= */
-.skill {
-    margin-bottom: 25px;
+.skill{
+    margin-bottom:25px;
 }
 
-.skill-name {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
+.skill-name{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:8px;
 }
 
-.progress {
-    width: 100%;
-    height: 12px;
-    background: #2b2b2b;
-    border-radius: 10px;
-    overflow: hidden;
+.progress{
+    width:100%;
+    height:12px;
+    background:#2b2b2b;
+    border-radius:10px;
+    overflow:hidden;
 }
 
-.progress-bar {
-    height: 100%;
-    background: #00ff88;
+.progress-bar{
+    height:100%;
+    background:#00bfff;
 }
 
 /* =========================
    FOOTER
 ========================= */
-footer {
-    text-align: center;
-    padding: 40px;
-    background: #120909;
-    color: #dcdcdc;
+footer{
+    text-align:center;
+    padding:40px;
+    background:#120909;
+    color:#dcdcdc;
 }
+
 </style>
 </head>
 <body>
