@@ -603,47 +603,34 @@ footer{
 }
 
 /* =========================
-   EDUCATION CARD CONTROL
+   EDUCATION INDIVIDUAL CONTROL
 ========================= */
 
 /* Common setup */
 #education .card{
     position: relative;
 
-    min-height: 420px;
+    min-height: 500px;
 
-    background: rgba(255,255,255,0.05);
-
-    border: 1px solid rgba(0,247,255,0.18);
-
-    border-radius: 18px;
+    display: block;
 
     padding: 24px;
 
     overflow: hidden;
-
-    backdrop-filter: blur(10px);
-
-    transition: 0.3s ease;
 }
 
-#education .card:hover{
-    transform: translateY(-6px);
-
-    box-shadow: 0 0 24px rgba(0,247,255,0.22);
-}
-
-/* Movable elements */
+/* Make everything movable */
 #education .card h3,
 #education .card .badge-wrap,
 #education .card .desc,
-#education .card .project-btn{
+#education .card .certificate-box{
     position: absolute;
 }
 
-/* -------------------------
-   CARD 1
-------------------------- */
+/* =========================
+   EDUCATION CARD 1
+========================= */
+
 #education .card:nth-child(1) h3{
     top:25px;
     left:24px;
@@ -655,19 +642,21 @@ footer{
 }
 
 #education .card:nth-child(1) .desc{
-    top:120px;
+    top:130px;
     left:24px;
     right:24px;
 }
 
-#education .card:nth-child(1) .project-btn{
+#education .card:nth-child(1) .certificate-box{
     bottom:30px;
     left:24px;
+    right:24px;
 }
 
-/* -------------------------
-   CARD 2
-------------------------- */
+/* =========================
+   EDUCATION CARD 2
+========================= */
+
 #education .card:nth-child(2) h3{
     top:25px;
     left:24px;
@@ -679,19 +668,21 @@ footer{
 }
 
 #education .card:nth-child(2) .desc{
-    top:120px;
+    top:130px;
     left:24px;
     right:24px;
 }
 
-#education .card:nth-child(2) .project-btn{
+#education .card:nth-child(2) .certificate-box{
     bottom:30px;
     left:24px;
+    right:24px;
 }
 
-/* -------------------------
-   CARD 3
-------------------------- */
+/* =========================
+   EDUCATION CARD 3
+========================= */
+
 #education .card:nth-child(3) h3{
     top:25px;
     left:24px;
@@ -703,170 +694,136 @@ footer{
 }
 
 #education .card:nth-child(3) .desc{
-    top:120px;
+    top:130px;
     left:24px;
     right:24px;
 }
 
-#education .card:nth-child(3) .project-btn{
+#education .card:nth-child(3) .certificate-box{
     bottom:30px;
     left:24px;
+    right:24px;
 }
 
 /* =========================
-   PROJECT CARD CONTROL
+   PROJECT INDIVIDUAL CONTROL
 ========================= */
 
+/* Common setup */
 #projects .project-card{
     position: relative;
 
-    min-height: 430px;
+    min-height: 550px;
 
-    background: rgba(255,255,255,0.05);
-
-    border: 1px solid rgba(0,247,255,0.18);
-
-    border-radius: 18px;
+    display: block;
 
     padding: 24px;
 
     overflow: hidden;
-
-    backdrop-filter: blur(10px);
-
-    transition: 0.3s ease;
 }
 
-#projects .project-card:hover{
-    transform: translateY(-6px);
-
-    box-shadow: 0 0 24px rgba(0,247,255,0.22);
-}
-
-/* Movable project elements */
+/* Make all project elements movable */
 #projects .project-card h3,
-#projects .project-card .badge,
+#projects .project-card .badge-wrap,
 #projects .project-card .project-desc,
 #projects .project-card .project-skills,
-#projects .project-card .project-btn{
-    position:absolute;
+#projects .project-card .certificate-box{
+    position: absolute;
 }
 
-/* -------------------------
-   PROJECT 1
-------------------------- */
+/* =========================
+   PROJECT CARD 1
+========================= */
+
 #projects .project-card:nth-child(1) h3{
     top:25px;
     left:24px;
 }
 
-#projects .project-card:nth-child(1) .badge{
+#projects .project-card:nth-child(1) .badge-wrap{
     top:70px;
     left:24px;
 }
 
 #projects .project-card:nth-child(1) .project-desc{
-    top:120px;
+    top:130px;
     left:24px;
     right:24px;
 }
 
 #projects .project-card:nth-child(1) .project-skills{
-    top:230px;
+    top:250px;
     left:24px;
 }
 
-#projects .project-card:nth-child(1) .project-btn{
+#projects .project-card:nth-child(1) .certificate-box{
     bottom:30px;
     left:24px;
+    right:24px;
 }
 
-/* -------------------------
-   PROJECT 2
-------------------------- */
+/* =========================
+   PROJECT CARD 2
+========================= */
+
 #projects .project-card:nth-child(2) h3{
     top:25px;
     left:24px;
 }
 
-#projects .project-card:nth-child(2) .badge{
+#projects .project-card:nth-child(2) .badge-wrap{
     top:70px;
     left:24px;
 }
 
 #projects .project-card:nth-child(2) .project-desc{
-    top:120px;
+    top:130px;
     left:24px;
     right:24px;
 }
 
 #projects .project-card:nth-child(2) .project-skills{
-    top:230px;
+    top:250px;
     left:24px;
 }
 
-#projects .project-card:nth-child(2) .project-btn{
+#projects .project-card:nth-child(2) .certificate-box{
     bottom:30px;
     left:24px;
+    right:24px;
 }
 
 /* =========================
-   BADGE STYLE
+   PROJECT CARD 3
 ========================= */
 
-.badge{
-    display:inline-block;
-
-    padding:6px 14px;
-
-    border-radius:30px;
-
-    background:rgba(0,200,255,0.12);
-
-    border:1px solid rgba(0,200,255,0.35);
-
-    color:#00e5ff;
-
-    font-size:13px;
-
-    font-weight:bold;
-
-    letter-spacing:0.5px;
-
-    backdrop-filter:blur(10px);
+#projects .project-card:nth-child(3) h3{
+    top:25px;
+    left:24px;
 }
 
-/* =========================
-   PDF BUTTON STYLE
-========================= */
-
-.project-btn{
-    display:inline-block;
-
-    padding:10px 18px;
-
-    background:#00c8ff;
-
-    color:#000;
-
-    border-radius:10px;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    transition:0.3s ease;
-
-    box-shadow:0 0 15px rgba(0,200,255,0.25);
+#projects .project-card:nth-child(3) .badge-wrap{
+    top:70px;
+    left:24px;
 }
 
-.project-btn:hover{
-    background:#ffffff;
-
-    transform:translateY(-3px);
-
-    box-shadow:0 0 20px rgba(0,200,255,0.45);
+#projects .project-card:nth-child(3) .project-desc{
+    top:130px;
+    left:24px;
+    right:24px;
 }
+
+#projects .project-card:nth-child(3) .project-skills{
+    top:250px;
+    left:24px;
+}
+
+#projects .project-card:nth-child(3) .certificate-box{
+    bottom:30px;
+    left:24px;
+    right:24px;
+}
+   
 </style>
 </head>
 
