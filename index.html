@@ -603,94 +603,270 @@ footer{
 }
 
 /* =========================
-   INDIVIDUAL CARD CONTROL
+   EDUCATION CARD CONTROL
 ========================= */
 
-/* Common setup for all cards */
-#education .card, 
-#experience .experience-card {
+/* Common setup */
+#education .card{
     position: relative;
-    min-height: 480px; /* Adjust based on your text amount */
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(0, 247, 255, 0.18);
+
+    min-height: 420px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(0,247,255,0.18);
+
     border-radius: 18px;
+
     padding: 24px;
-    display: block;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s ease;
 }
 
-/* Base styles for absolute elements */
-#education .card h3, .badge-wrap, .desc, .project-btn {
+#education .card:hover{
+    transform: translateY(-6px);
+
+    box-shadow: 0 0 24px rgba(0,247,255,0.22);
+}
+
+/* Movable elements */
+#education .card h3,
+#education .card .badge-wrap,
+#education .card .desc,
+#education .card .project-btn{
     position: absolute;
 }
 
 /* -------------------------
-   EDUCATION CARD 1 (GISMA)
-   ------------------------- */
-#education .card:nth-child(1) h3 { top: 25px; left: 24px; }
-#education .card:nth-child(1) .badge-wrap { top: 65px; left: 24px; }
-#education .card:nth-child(1) .desc { top: 110px; left: 24px; right: 24px; }
-#education .card:nth-child(1) .project-btn { top: 230px; left: 24px; }
-
-/* -------------------------
-   EDUCATION CARD 2 (HSSC)
-   ------------------------- */
-#education .card:nth-child(2) h3 { top: 30px; left: 30px; } /* Slightly different position */
-#education .card:nth-child(2) .badge-wrap { top: 75px; left: 30px; }
-#education .card:nth-child(2) .desc { top: 120px; left: 30px; right: 24px; }
-#education .card:nth-child(2) .project-btn { top: 250px; left: 30px; }
-
-/* -------------------------
-   EDUCATION CARD 3 (SSC)
-   ------------------------- */
-#education .card:nth-child(3) h3 { top: 20px; left: 20px; }
-#education .card:nth-child(3) .badge-wrap { top: 60px; left: 20px; }
-#education .card:nth-child(3) .desc { top: 100px; left: 20px; right: 24px; }
-#education .card:nth-child(3) .project-btn { top: 210px; left: 20px; }
-
-/* =========================
-   PROJECTS INDIVIDUAL CONTROL
-========================= */
-
-/* Common setup for project cards */
-#projects .project-card {
-    position: relative;
-    min-height: 480px; /* Adjust height to fit your content */
-    display: block;    /* Required for absolute positioning */
-    padding: 24px;
-    overflow: hidden;
+   CARD 1
+------------------------- */
+#education .card:nth-child(1) h3{
+    top:25px;
+    left:24px;
 }
 
-/* Make all internal elements movable */
+#education .card:nth-child(1) .badge-wrap{
+    top:70px;
+    left:24px;
+}
+
+#education .card:nth-child(1) .desc{
+    top:120px;
+    left:24px;
+    right:24px;
+}
+
+#education .card:nth-child(1) .project-btn{
+    bottom:30px;
+    left:24px;
+}
+
+/* -------------------------
+   CARD 2
+------------------------- */
+#education .card:nth-child(2) h3{
+    top:25px;
+    left:24px;
+}
+
+#education .card:nth-child(2) .badge-wrap{
+    top:70px;
+    left:24px;
+}
+
+#education .card:nth-child(2) .desc{
+    top:120px;
+    left:24px;
+    right:24px;
+}
+
+#education .card:nth-child(2) .project-btn{
+    bottom:30px;
+    left:24px;
+}
+
+/* -------------------------
+   CARD 3
+------------------------- */
+#education .card:nth-child(3) h3{
+    top:25px;
+    left:24px;
+}
+
+#education .card:nth-child(3) .badge-wrap{
+    top:70px;
+    left:24px;
+}
+
+#education .card:nth-child(3) .desc{
+    top:120px;
+    left:24px;
+    right:24px;
+}
+
+#education .card:nth-child(3) .project-btn{
+    bottom:30px;
+    left:24px;
+}
+
+/* =========================
+   PROJECT CARD CONTROL
+========================= */
+
+#projects .project-card{
+    position: relative;
+
+    min-height: 430px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(0,247,255,0.18);
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s ease;
+}
+
+#projects .project-card:hover{
+    transform: translateY(-6px);
+
+    box-shadow: 0 0 24px rgba(0,247,255,0.22);
+}
+
+/* Movable project elements */
 #projects .project-card h3,
 #projects .project-card .badge,
 #projects .project-card .project-desc,
 #projects .project-card .project-skills,
-#projects .project-card .project-btn {
-    position: absolute;
+#projects .project-card .project-btn{
+    position:absolute;
 }
 
-/* --- PROJECT CARD 1 --- */
-#projects .card:nth-child(1) h3 { top: 25px; left: 24px; }
-#projects .card:nth-child(1) .badge { top: 65px; left: 24px; }
-#projects .card:nth-child(1) .project-desc { top: 105px; left: 24px; right: 24px; }
-#projects .card:nth-child(1) .project-skills { top: 220px; left: 24px; }
-#projects .card:nth-child(1) .project-btn { bottom: 30px; left: 24px; }
+/* -------------------------
+   PROJECT 1
+------------------------- */
+#projects .project-card:nth-child(1) h3{
+    top:25px;
+    left:24px;
+}
 
-/* --- PROJECT CARD 2 --- */
-#projects .card:nth-child(2) h3 { top: 25px; left: 24px; }
-#projects .card:nth-child(2) .badge { top: 65px; left: 24px; }
-#projects .card:nth-child(2) .project-desc { top: 105px; left: 24px; right: 24px; }
-#projects .card:nth-child(2) .project-skills { top: 220px; left: 24px; }
-#projects .card:nth-child(2) .project-btn { bottom: 30px; left: 24px; }
+#projects .project-card:nth-child(1) .badge{
+    top:70px;
+    left:24px;
+}
 
-/* --- PROJECT CARD 3 --- */
-#projects .card:nth-child(3) h3 { top: 25px; left: 24px; }
-#projects .card:nth-child(3) .badge { top: 65px; left: 24px; }
-#projects .card:nth-child(3) .project-desc { top: 105px; left: 24px; right: 24px; }
-#projects .card:nth-child(3) .project-skills { top: 220px; left: 24px; }
-#projects .card:nth-child(3) .project-btn { bottom: 30px; left: 24px; }
+#projects .project-card:nth-child(1) .project-desc{
+    top:120px;
+    left:24px;
+    right:24px;
+}
 
-   
+#projects .project-card:nth-child(1) .project-skills{
+    top:230px;
+    left:24px;
+}
+
+#projects .project-card:nth-child(1) .project-btn{
+    bottom:30px;
+    left:24px;
+}
+
+/* -------------------------
+   PROJECT 2
+------------------------- */
+#projects .project-card:nth-child(2) h3{
+    top:25px;
+    left:24px;
+}
+
+#projects .project-card:nth-child(2) .badge{
+    top:70px;
+    left:24px;
+}
+
+#projects .project-card:nth-child(2) .project-desc{
+    top:120px;
+    left:24px;
+    right:24px;
+}
+
+#projects .project-card:nth-child(2) .project-skills{
+    top:230px;
+    left:24px;
+}
+
+#projects .project-card:nth-child(2) .project-btn{
+    bottom:30px;
+    left:24px;
+}
+
+/* =========================
+   BADGE STYLE
+========================= */
+
+.badge{
+    display:inline-block;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    background:rgba(0,200,255,0.12);
+
+    border:1px solid rgba(0,200,255,0.35);
+
+    color:#00e5ff;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    letter-spacing:0.5px;
+
+    backdrop-filter:blur(10px);
+}
+
+/* =========================
+   PDF BUTTON STYLE
+========================= */
+
+.project-btn{
+    display:inline-block;
+
+    padding:10px 18px;
+
+    background:#00c8ff;
+
+    color:#000;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:0.3s ease;
+
+    box-shadow:0 0 15px rgba(0,200,255,0.25);
+}
+
+.project-btn:hover{
+    background:#ffffff;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 20px rgba(0,200,255,0.45);
+}
 </style>
 </head>
 
@@ -772,71 +948,107 @@ footer{
 
    
 <section id="education">
+
     <h2 class="section-title">Education</h2>
 
     <div class="cards">
 
-        <!-- GISMA -->
+        <!-- GISMA UNIVERSITY -->
         <div class="card">
-            <h3>GISMA University</h3>
+
+            <h3>GISMA University of Applied Sciences</h3>
 
             <div class="badge-wrap">
                 <span class="badge">University</span>
             </div>
 
             <p class="desc">
-                Bachelor’s in Software Engineering focused on
-                programming, AI tools, and software systems.
+                Bachelor’s in Software Engineering in Berlin, Germany.
+                Focused on software development, programming,
+                AI tools, and project management.
             </p>
 
-            <a href="gisma.pdf"
-               target="_blank"
-               class="project-btn">
-               📄 View Certificate
-            </a>
+            <!-- CERTIFICATE BOX -->
+            <div class="certificate-box">
+
+                <span>Degree Certificate</span>
+
+                <a href="gisma.pdf"
+                   target="_blank"
+                   class="certificate-btn">
+
+                   📄 View PDF
+
+                </a>
+
+            </div>
+
         </div>
 
         <!-- HSSC -->
         <div class="card">
-            <h3>Higher Secondary</h3>
+
+            <h3>Higher Secondary School Certificate</h3>
 
             <div class="badge-wrap">
                 <span class="badge">College</span>
             </div>
 
             <p class="desc">
-                Pre-Engineering studies with focus on mathematics,
-                physics, and computer science.
+                Completed Pre-Engineering studies with focus on
+                Mathematics, Physics, and Computer fundamentals.
             </p>
 
-            <a href="hssc.pdf"
-               target="_blank"
-               class="project-btn">
-               📄 View Certificate
-            </a>
+            <!-- CERTIFICATE BOX -->
+            <div class="certificate-box">
+
+                <span>HSSC Certificate</span>
+
+                <a href="hssc.pdf"
+                   target="_blank"
+                   class="certificate-btn">
+
+                   📄 View PDF
+
+                </a>
+
+            </div>
+
         </div>
 
         <!-- SSC -->
         <div class="card">
-            <h3>Secondary Education</h3>
+
+            <h3>Secondary School Certificate</h3>
 
             <div class="badge-wrap">
                 <span class="badge">School</span>
             </div>
 
             <p class="desc">
-                Built strong academic foundation in science
-                and analytical thinking.
+                Built strong academic foundation in science,
+                analytical thinking, and communication skills.
             </p>
 
-            <a href="ssc.pdf"
-               target="_blank"
-               class="project-btn">
-               📄 View Certificate
-            </a>
+            <!-- CERTIFICATE BOX -->
+            <div class="certificate-box">
+
+                <span>SSC Certificate</span>
+
+                <a href="ssc.pdf"
+                   target="_blank"
+                   class="certificate-btn">
+
+                   📄 View PDF
+
+                </a>
+
+            </div>
+
         </div>
 
     </div>
+
 </section>
 
 <!-- LANGUAGE -->
@@ -1126,23 +1338,37 @@ footer{
 
             <h3>📘 Academic Writing</h3>
 
-            <span class="badge">Research Project</span>
+            <div class="badge-wrap">
+                <span class="badge">Research Project</span>
+            </div>
 
             <p class="project-desc">
-                Research paper analyzing technology evolution
-                and modern software systems.
+                Research paper analyzing the evolution of technology
+                and its impact on modern software systems.
             </p>
 
             <div class="project-skills">
+
                 <b>Skills Used:</b><br>
-                Research, Documentation
+
+                Research, Documentation, Critical Thinking
+
             </div>
 
-            <a href="project1.pdf"
-               target="_blank"
-               class="project-btn">
-               📄 View Project
-            </a>
+            <!-- PROJECT PDF BOX -->
+            <div class="certificate-box">
+
+                <span>Project Documentation</span>
+
+                <a href="project1.pdf"
+                   target="_blank"
+                   class="certificate-btn">
+
+                   📄 View PDF
+
+                </a>
+
+            </div>
 
         </div>
 
@@ -1151,23 +1377,76 @@ footer{
 
             <h3>💻 Portfolio Website</h3>
 
-            <span class="badge">Web Development</span>
+            <div class="badge-wrap">
+                <span class="badge">Web Development</span>
+            </div>
 
             <p class="project-desc">
-                Developed a modern responsive portfolio website
+                Designed and developed a responsive portfolio website
                 using HTML, CSS, and JavaScript.
             </p>
 
             <div class="project-skills">
+
                 <b>Skills Used:</b><br>
+
                 HTML, CSS, JavaScript
+
             </div>
 
-            <a href="project2.pdf"
-               target="_blank"
-               class="project-btn">
-               📄 View Project
-            </a>
+            <!-- PROJECT PDF BOX -->
+            <div class="certificate-box">
+
+                <span>Project Report</span>
+
+                <a href="project2.pdf"
+                   target="_blank"
+                   class="certificate-btn">
+
+                   📄 View PDF
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="card project-card">
+
+            <h3>🤖 AI Research Project</h3>
+
+            <div class="badge-wrap">
+                <span class="badge">AI Tools</span>
+            </div>
+
+            <p class="project-desc">
+                Explored modern AI tools and their applications
+                in software engineering and automation systems.
+            </p>
+
+            <div class="project-skills">
+
+                <b>Skills Used:</b><br>
+
+                AI Tools, Research, Analysis
+
+            </div>
+
+            <!-- PROJECT PDF BOX -->
+            <div class="certificate-box">
+
+                <span>Research PDF</span>
+
+                <a href="project3.pdf"
+                   target="_blank"
+                   class="certificate-btn">
+
+                   📄 View PDF
+
+                </a>
+
+            </div>
 
         </div>
 
