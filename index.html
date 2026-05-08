@@ -630,92 +630,59 @@ footer{
    EXPERIENCE SECTION
 ========================= */
 
-.experience-card{
-    background: rgba(255,255,255,0.05);
+/* =========================
+   EXPERIENCE INDIVIDUAL CONTROL (ALL 4 BOXES)
+========================= */
 
-    border: 1px solid rgba(0,247,255,0.18);
-
-    border-radius: 18px;
-
-    padding: 22px;
-
-    box-shadow: 0 8px 22px rgba(0,247,255,0.08);
-
-    transition: 0.35s ease;
+/* Common setup to enable manual positioning */
+#experience .experience-card {
+    position: relative;
+    min-height: 580px; /* Tall enough for all lists and buttons */
+    display: block;
+    padding: 24px;
 }
 
-.experience-card:hover{
-    transform: translateY(-6px);
-
-    box-shadow: 0 0 25px rgba(0,247,255,0.22);
+/* Base style: All internal elements become movable */
+#experience .experience-card h3,
+#experience .experience-card .badge-wrap,
+#experience .experience-card .desc,
+#experience .experience-card .responsibilities,
+#experience .experience-card .skills-used,
+#experience .experience-card .project-btn {
+    position: absolute;
 }
 
-/* TITLE */
-.experience-card h3{
-    color: #ffffff;
+/* --- CARD 1 (IT Support) --- */
+#experience .card:nth-child(1) h3 { top: 25px; left: 24px; }
+#experience .card:nth-child(1) .badge-wrap { top: 60px; left: 24px; }
+#experience .card:nth-child(1) .desc { top: 140px; left: 24px; right: 24px; }
+#experience .card:nth-child(1) .responsibilities { top: 210px; left: 24px; }
+#experience .card:nth-child(1) .skills-used { top: 320px; left: 24px; }
+#experience .card:nth-child(1) .project-btn { bottom: 30px; left: 24px; }
 
-    font-size: 20px;
+/* --- CARD 2 (Hotel Auditor) --- */
+#experience .card:nth-child(2) h3 { top: 25px; left: 24px; }
+#experience .card:nth-child(2) .badge-wrap { top: 60px; left: 24px; }
+#experience .card:nth-child(2) .desc { top: 140px; left: 24px; right: 24px; }
+#experience .card:nth-child(2) .responsibilities { top: 210px; left: 24px; }
+#experience .card:nth-child(2) .skills-used { top: 320px; left: 24px; }
+#experience .card:nth-child(2) .project-btn { bottom: 30px; left: 24px; }
 
-    margin-bottom: 12px;
-}
+/* --- CARD 3 (Kitchen Assistant) --- */
+#experience .card:nth-child(3) h3 { top: 25px; left: 24px; }
+#experience .card:nth-child(3) .badge-wrap { top: 60px; left: 24px; }
+#experience .card:nth-child(3) .desc { top: 140px; left: 24px; right: 24px; }
+#experience .card:nth-child(3) .responsibilities { top: 210px; left: 24px; }
+#experience .card:nth-child(3) .skills-used { top: 320px; left: 24px; }
+#experience .card:nth-child(3) .project-btn { bottom: 30px; left: 24px; }
 
-/* BADGE */
-.badge-wrap{
-    margin-bottom: 14px;
-}
-
-.badge{
-    display:inline-block;
-
-    padding:5px 12px;
-
-    border-radius:20px;
-
-    font-size:11px;
-    font-weight:600;
-
-    color:#00ffcc;
-
-    background:rgba(0,255,200,0.12);
-
-    border:1px solid rgba(0,255,200,0.35);
-}
-
-/* DESCRIPTION */
-.desc{
-    color: rgba(255,255,255,0.78);
-
-    line-height: 1.7;
-
-    margin-bottom: 18px;
-
-    font-size: 14px;
-}
-
-/* META */
-.meta{
-    display:flex;
-
-    flex-direction:column;
-
-    gap:16px;
-}
-
-/* RESPONSIBILITIES */
-.responsibilities ul{
-    padding-left:18px;
-
-    margin-top:8px;
-}
-
-.responsibilities li{
-    margin-bottom:6px;
-
-    color: rgba(255,255,255,0.82);
-
-    font-size:14px;
-}
-
+/* --- CARD 4 (Uni Projects) --- */
+#experience .card:nth-child(4) h3 { top: 25px; left: 24px; }
+#experience .card:nth-child(4) .badge-wrap { top: 60px; left: 24px; }
+#experience .card:nth-child(4) .desc { top: 140px; left: 24px; right: 24px; }
+#experience .card:nth-child(4) .responsibilities { top: 210px; left: 24px; }
+#experience .card:nth-child(4) .skills-used { top: 320px; left: 24px; }
+#experience .card:nth-child(4) .project-btn { bottom: 30px; left: 24px; }
 /* =========================
    LANGUAGE PREMIUM STYLE
 ========================= */
