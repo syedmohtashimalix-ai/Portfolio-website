@@ -602,126 +602,16 @@ footer{
     font-size:14px;
 }
 
-/* =========================
-   EDUCATION INDIVIDUAL CONTROL (CLEAN + FIXED)
-========================= */
-
-#education .card{
-    position: relative;
-
-    min-height: 500px;
-
-    display: block;
-
-    padding: 24px;
-
-    overflow: hidden;
-
-    background: rgba(255,255,255,0.05);
-
-    border: 1px solid rgba(0,247,255,0.18);
-
-    border-radius: 18px;
-
-    backdrop-filter: blur(10px);
-
-    transition: 0.3s ease;
-}
-
-#education .card:hover{
-    transform: translateY(-6px);
-
-    box-shadow: 0 0 24px rgba(0,247,255,0.25);
-}
-
-/* Make elements movable */
-#education .card h3,
-#education .card .badge-wrap,
-#education .card .desc,
-#education .card .certificate-box{
-    position: absolute;
-}
 
 /* =========================
-   CARD 1
-========================= */
-
-#education .card:nth-of-type(1) h3{
-    top:25px;
-    left:24px;
-}
-
-#education .card:nth-of-type(1) .badge-wrap{
-    top:70px;
-    left:24px;
-}
-
-#education .card:nth-of-type(1) .desc{
-    top:130px;
-    left:24px;
-    right:24px;
-}
-
-#education .card:nth-of-type(1) .certificate-box{
-    bottom:30px;
-    left:24px;
-}
-
-/* =========================
-   CARD 2
-========================= */
-
-#education .card:nth-of-type(2) h3{
-    top:25px;
-    left:24px;
-}
-
-#education .card:nth-of-type(2) .badge-wrap{
-    top:70px;
-    left:24px;
-}
-
-#education .card:nth-of-type(2) .desc{
-    top:130px;
-    left:24px;
-    right:24px;
-}
-
-#education .card:nth-of-type(2) .certificate-box{
-    bottom:30px;
-    left:24px;
-}
-
-/* =========================
-   CARD 3
-========================= */
-
-#education .card:nth-of-type(3) h3{
-    top:25px;
-    left:24px;
-}
-
-#education .card:nth-of-type(3) .badge-wrap{
-    top:70px;
-    left:24px;
-}
-
-#education .card:nth-of-type(3) .desc{
-    top:130px;
-    left:24px;
-    right:24px;
-}
-
-#education .card:nth-of-type(3) .certificate-box{
-    bottom:30px;
-    left:24px;
-}
-
-/* =========================
-   CV STYLE CERTIFICATE BUTTON
+   CV STYLE BUTTON (GLOBAL)
 ========================= */
 
 .certificate-box{
+    position: absolute;
+
+    left: 24px;
+
     display: inline-block;
 
     padding: 8px 14px;
@@ -755,20 +645,16 @@ footer{
     font-weight: bold;
 
     font-size: 14px;
-
-    letter-spacing: 0.3px;
 }
 
 /* =========================
-   PROJECT INDIVIDUAL CONTROL (CLEAN + FIXED)
+   EDUCATION SECTION
 ========================= */
 
-#projects .project-card{
+#education .card{
     position: relative;
 
-    min-height: 550px;
-
-    display: block;
+    min-height: 500px;
 
     padding: 24px;
 
@@ -781,17 +667,58 @@ footer{
     border-radius: 18px;
 
     backdrop-filter: blur(10px);
-
-    transition: 0.3s ease;
 }
 
-#projects .project-card:hover{
-    transform: translateY(-6px);
-
-    box-shadow: 0 0 24px rgba(0,247,255,0.25);
+/* movable elements */
+#education .card h3,
+#education .card .badge-wrap,
+#education .card .desc,
+#education .card .certificate-box{
+    position: absolute;
 }
 
-/* Make everything movable */
+/* CARD 1 */
+#education .card:nth-of-type(1) h3{ top:25px; left:24px; }
+#education .card:nth-of-type(1) .badge-wrap{ top:70px; left:24px; }
+#education .card:nth-of-type(1) .desc{ top:130px; left:24px; right:24px; }
+#education .card:nth-of-type(1) .certificate-box{ top:240px; }
+
+/* CARD 2 */
+#education .card:nth-of-type(2) h3{ top:25px; left:24px; }
+#education .card:nth-of-type(2) .badge-wrap{ top:70px; left:24px; }
+#education .card:nth-of-type(2) .desc{ top:130px; left:24px; right:24px; }
+#education .card:nth-of-type(2) .certificate-box{ top:240px; }
+
+/* CARD 3 */
+#education .card:nth-of-type(3) h3{ top:25px; left:24px; }
+#education .card:nth-of-type(3) .badge-wrap{ top:70px; left:24px; }
+#education .card:nth-of-type(3) .desc{ top:130px; left:24px; right:24px; }
+#education .card:nth-of-type(3) .certificate-box{ top:240px; }
+
+
+/* =========================
+   PROJECT SECTION
+========================= */
+
+#projects .project-card{
+    position: relative;
+
+    min-height: 550px;
+
+    padding: 24px;
+
+    overflow: hidden;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(0,247,255,0.18);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(10px);
+}
+
+/* movable elements */
 #projects .project-card h3,
 #projects .project-card .badge-wrap,
 #projects .project-card .project-desc,
@@ -800,138 +727,28 @@ footer{
     position: absolute;
 }
 
-/* =========================
-   PROJECT CARD 1
-========================= */
+/* PROJECT 1 */
+#projects .project-card:nth-of-type(1) h3{ top:25px; left:24px; }
+#projects .project-card:nth-of-type(1) .badge-wrap{ top:70px; left:24px; }
+#projects .project-card:nth-of-type(1) .project-desc{ top:130px; left:24px; right:24px; }
+#projects .project-card:nth-of-type(1) .project-skills{ top:250px; left:24px; }
+#projects .project-card:nth-of-type(1) .certificate-box{ top:340px; }
 
-#projects .project-card:nth-of-type(1) h3{
-    top:25px;
-    left:24px;
-}
+/* PROJECT 2 */
+#projects .project-card:nth-of-type(2) h3{ top:25px; left:24px; }
+#projects .project-card:nth-of-type(2) .badge-wrap{ top:70px; left:24px; }
+#projects .project-card:nth-of-type(2) .project-desc{ top:130px; left:24px; right:24px; }
+#projects .project-card:nth-of-type(2) .project-skills{ top:250px; left:24px; }
+#projects .project-card:nth-of-type(2) .certificate-box{ top:340px; }
 
-#projects .project-card:nth-of-type(1) .badge-wrap{
-    top:70px;
-    left:24px;
-}
+/* PROJECT 3 */
+#projects .project-card:nth-of-type(3) h3{ top:25px; left:24px; }
+#projects .project-card:nth-of-type(3) .badge-wrap{ top:70px; left:24px; }
+#projects .project-card:nth-of-type(3) .project-desc{ top:130px; left:24px; right:24px; }
+#projects .project-card:nth-of-type(3) .project-skills{ top:250px; left:24px; }
+#projects .project-card:nth-of-type(3) .certificate-box{ top:340px; }
 
-#projects .project-card:nth-of-type(1) .project-desc{
-    top:130px;
-    left:24px;
-    right:24px;
-}
 
-#projects .project-card:nth-of-type(1) .project-skills{
-    top:250px;
-    left:24px;
-}
-
-#projects .project-card:nth-of-type(1) .certificate-box{
-    bottom:30px;
-    left:24px;
-}
-
-/* =========================
-   PROJECT CARD 2
-========================= */
-
-#projects .project-card:nth-of-type(2) h3{
-    top:25px;
-    left:24px;
-}
-
-#projects .project-card:nth-of-type(2) .badge-wrap{
-    top:70px;
-    left:24px;
-}
-
-#projects .project-card:nth-of-type(2) .project-desc{
-    top:130px;
-    left:24px;
-    right:24px;
-}
-
-#projects .project-card:nth-of-type(2) .project-skills{
-    top:250px;
-    left:24px;
-}
-
-#projects .project-card:nth-of-type(2) .certificate-box{
-    bottom:30px;
-    left:24px;
-}
-
-/* =========================
-   PROJECT CARD 3
-========================= */
-
-#projects .project-card:nth-of-type(3) h3{
-    top:25px;
-    left:24px;
-}
-
-#projects .project-card:nth-of-type(3) .badge-wrap{
-    top:70px;
-    left:24px;
-}
-
-#projects .project-card:nth-of-type(3) .project-desc{
-    top:130px;
-    left:24px;
-    right:24px;
-}
-
-#projects .project-card:nth-of-type(3) .project-skills{
-    top:250px;
-    left:24px;
-}
-
-#projects .project-card:nth-of-type(3) .certificate-box{
-    bottom:30px;
-    left:24px;
-}
-
-/* =========================
-   CV STYLE BUTTON (PROJECT + EDUCATION SAME STYLE)
-========================= */
-
-.certificate-box{
-    display: inline-block;
-
-    padding: 8px 14px;
-
-    border-radius: 10px;
-
-    background: rgba(0,200,255,0.12);
-
-    border: 1px solid rgba(0,200,255,0.35);
-
-    backdrop-filter: blur(10px);
-
-    transition: 0.3s ease;
-
-    box-shadow: 0 0 12px rgba(0,200,255,0.15);
-}
-
-.certificate-box:hover{
-    transform: translateY(-2px);
-
-    box-shadow: 0 0 18px rgba(0,200,255,0.35);
-
-    background: rgba(0,200,255,0.18);
-}
-
-.certificate-box a{
-    color: #00e5ff;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-    font-size: 14px;
-
-    letter-spacing: 0.3px;
-}
-   
 </style>
 </head>
 
