@@ -10,108 +10,47 @@
 <style>
 
 /* =========================
-   PROJECT SECTION
+   PROJECTS INDIVIDUAL CONTROL
 ========================= */
 
-.project-card{
-    background: rgba(255,255,255,0.05);
-
-    border: 1px solid rgba(0,247,255,0.18);
-
-    border-radius: 18px;
-
+/* Common setup for project cards */
+#projects .project-card {
+    position: relative;
+    min-height: 480px; /* Adjust height to fit your content */
+    display: block;    /* Required for absolute positioning */
     padding: 24px;
-
-    box-shadow: 0 8px 22px rgba(0,247,255,0.08);
-
-    transition: 0.35s ease;
+    overflow: hidden;
 }
 
-.project-card:hover{
-    transform: translateY(-6px);
-
-    box-shadow: 0 0 25px rgba(0,247,255,0.22);
+/* Make all internal elements movable */
+#projects .project-card h3,
+#projects .project-card .badge,
+#projects .project-card .project-desc,
+#projects .project-card .project-skills,
+#projects .project-card .project-btn {
+    position: absolute;
 }
 
-/* TITLE */
-.project-card h3{
-    color:#ffffff;
+/* --- PROJECT CARD 1 --- */
+#projects .card:nth-child(1) h3 { top: 25px; left: 24px; }
+#projects .card:nth-child(1) .badge { top: 65px; left: 24px; }
+#projects .card:nth-child(1) .project-desc { top: 105px; left: 24px; right: 24px; }
+#projects .card:nth-child(1) .project-skills { top: 220px; left: 24px; }
+#projects .card:nth-child(1) .project-btn { bottom: 30px; left: 24px; }
 
-    margin-bottom:14px;
+/* --- PROJECT CARD 2 --- */
+#projects .card:nth-child(2) h3 { top: 25px; left: 24px; }
+#projects .card:nth-child(2) .badge { top: 65px; left: 24px; }
+#projects .card:nth-child(2) .project-desc { top: 105px; left: 24px; right: 24px; }
+#projects .card:nth-child(2) .project-skills { top: 220px; left: 24px; }
+#projects .card:nth-child(2) .project-btn { bottom: 30px; left: 24px; }
 
-    font-size:20px;
-}
-
-/* BADGE */
-.project-card .badge{
-    display:inline-block;
-
-    margin-bottom:16px;
-
-    padding:5px 12px;
-
-    border-radius:20px;
-
-    font-size:11px;
-    font-weight:600;
-
-    color:#00ffcc;
-
-    background:rgba(0,255,200,0.12);
-
-    border:1px solid rgba(0,255,200,0.35);
-}
-
-/* DESCRIPTION */
-.project-desc{
-    color:rgba(255,255,255,0.78);
-
-    line-height:1.8;
-
-    font-size:14px;
-
-    margin-bottom:18px;
-}
-
-/* SKILLS */
-.project-skills{
-    color:#00f7ff;
-
-    line-height:1.7;
-
-    font-size:14px;
-
-    margin-bottom:22px;
-}
-
-/* BUTTON */
-.project-btn{
-    display:inline-block;
-
-    padding:10px 18px;
-
-    border-radius:10px;
-
-    background:#00c8ff;
-
-    color:#000;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:0.3s ease;
-
-    box-shadow:0 0 12px rgba(0,200,255,0.35);
-}
-
-.project-btn:hover{
-    background:#00ffcc;
-
-    transform:translateY(-3px);
-
-    box-shadow:0 0 20px rgba(0,255,200,0.5);
-}
+/* --- PROJECT CARD 3 --- */
+#projects .card:nth-child(3) h3 { top: 25px; left: 24px; }
+#projects .card:nth-child(3) .badge { top: 65px; left: 24px; }
+#projects .card:nth-child(3) .project-desc { top: 105px; left: 24px; right: 24px; }
+#projects .card:nth-child(3) .project-skills { top: 220px; left: 24px; }
+#projects .card:nth-child(3) .project-btn { bottom: 30px; left: 24px; }
 
 /* =========================
    CLOSING SECTION
@@ -626,9 +565,6 @@ footer{
     }
 }
 
-   /* =========================
-   EXPERIENCE SECTION
-========================= */
 
 /* =========================
    EXPERIENCE INDIVIDUAL CONTROL (ALL 4 BOXES)
@@ -1210,90 +1146,29 @@ footer{
 </section>
 
 <!-- PROJECTS -->
-<!-- PROJECTS -->
 <section id="projects">
-
     <h2 class="section-title">Projects</h2>
-
     <div class="cards">
 
-        <!-- PROJECT 1 -->
         <div class="card project-card">
-
             <h3>📘 Academic Writing</h3>
-
             <span class="badge">Academic Project</span>
-
+            
             <p class="project-desc">
-                Research paper analyzing the evolution of technology
+                Research paper analyzing the evolution of technology 
                 and its impact on modern software systems.
             </p>
 
             <div class="project-skills">
-                <b>Skills Used:</b>
-                Research, Documentation, Academic Writing
+                <b>Skills Used:</b><br>
+                Research, Documentation
             </div>
 
-            <a class="btn project-btn"
-               href="project1.pdf"
-               target="_blank">
-               Open PDF
-            </a>
-
+            <a class="project-btn" href="project1.pdf" target="_blank">Open PDF</a>
         </div>
 
-        <!-- PROJECT 2 -->
-        <div class="card project-card">
-
-            <h3>📊 Research Methodology</h3>
-
-            <span class="badge">Academic Project</span>
-
-            <p class="project-desc">
-                Study focused on research methods, data collection techniques,
-                and structured academic reporting.
-            </p>
-
-            <div class="project-skills">
-                <b>Skills Used:</b>
-                Analysis, Research Methods, Report Writing
-            </div>
-
-            <a class="btn project-btn"
-               href="research-methodology.pdf"
-               target="_blank">
-               Open PDF
-            </a>
-
         </div>
-
-        <!-- PROJECT 3 -->
-        <div class="card project-card">
-
-            <h3>⛓️ Blockchain Research</h3>
-
-            <span class="badge">Technology Research</span>
-
-            <p class="project-desc">
-                Research on blockchain technology,
-                system architecture, and real-world applications.
-            </p>
-
-            <div class="project-skills">
-                <b>Skills Used:</b>
-                Blockchain Concepts, Critical Thinking, Documentation
-            </div>
-
-            <a class="btn project-btn"
-               href="blockchain.pdf"
-               target="_blank">
-               Open PDF
-            </a>
-
-        </div>
-
-    </div>
-
+   
 </section>
 
 <footer>
