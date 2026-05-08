@@ -418,62 +418,54 @@ footer{
 }
 
 /* =========================
-   MOBILE RESPONSIVE
+   REFINED EDUCATION & PROGRESS
 ========================= */
-@media(max-width:900px){
-    .hero{
-        flex-direction:column-reverse;
-        text-align:center;
-    }
 
-    .hero-text{
-        width:100%;
-    }
-
-    .hero-text h2{
-        font-size:40px;
-    }
-
-    .hero-image{
-        width:280px;
-        height:280px;
-    }
-   
-}
-   #education .card{
-    text-align:center;
-    min-height:220px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+/* Use the same logic as experience-card for education */
+#education .card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 247, 255, 0.18);
+    border-radius: 18px;
+    padding: 24px;
+    transition: 0.35s ease;
+    
+    /* 🔥 ALIGNMENT FIX: This makes title and text start at the left */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+    min-height: auto; /* Changed from 220px to fit content naturally */
 }
 
-#education .card h3{
-    font-size:22px;
-    margin-bottom:15px;
+#education .card h3 {
+    font-size: 20px; /* Matches experience h3 size */
+    color: #ffffff;
+    margin-bottom: 12px;
 }
 
-#education .card p{
-    line-height:1.8;
-    color:#d6d6d6;
+#education .card .desc {
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 14px;
+    margin-bottom: 18px;
 }
 
-   .progress{
-    width:100%;
-    height:12px;
-    background:#111827;
-    border-radius:20px;
-    overflow:hidden;
-    margin-top:5px;
+/* PROGRESS BARS (Unified Style) */
+.progress {
+    width: 100%;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 30px;
+    overflow: hidden;
+    margin-top: 5px;
 }
 
-.progress-bar{
-    height:100%;
-    background:linear-gradient(90deg,#00c8ff,#00ffcc);
-    border-radius:20px;
-    box-shadow:0 0 12px rgba(0,200,255,0.5);
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #00c8ff, #00ffcc);
+    border-radius: 30px;
+    box-shadow: 0 0 12px rgba(0, 200, 255, 0.4);
 }
-
 /* =========================
    SKILLS PREMIUM STYLE
 ========================= */
@@ -877,38 +869,53 @@ footer{
 
         <div class="card experience-card">
             <h3>GISMA University of Applied Sciences</h3>
+
             <div class="badge-wrap">
                 <span class="badge">University</span>
             </div>
+
             <p class="desc">
                 Bachelor’s in Software Engineering <br>
                 Berlin, Germany <br>
                 2026 - Present
             </p>
-            <a class="btn project-btn" href="gisma-enrollment.pdf" target="_blank">View Certificate</a>
+
+            <a class="btn project-btn" href="gisma-enrollment.pdf" target="_blank">
+                Open PDF
+            </a>
         </div>
 
         <div class="card experience-card">
             <h3>Higher Secondary Education</h3>
+
             <div class="badge-wrap">
                 <span class="badge">College</span>
             </div>
+
             <p class="desc">
                 Pre-Engineering / Computer Studies <br>
                 Completed with focus on mathematics and technology.
             </p>
-            <a class="btn project-btn" href="hssc-transcript.pdf" target="_blank">Open PDF</a>
+
+            <a class="btn project-btn" href="hssc-transcript.pdf" target="_blank">
+                Open PDF
+            </a>
         </div>
 
         <div class="card experience-card">
             <h3>Secondary School Education</h3>
+
             <div class="badge-wrap">
                 <span class="badge">School</span>
             </div>
+
             <p class="desc">
                 Strong foundation in science, communication, and teamwork.
             </p>
-            <a class="btn project-btn" href="ssc-certificate.pdf" target="_blank">Open PDF</a>
+
+            <a class="btn project-btn" href="ssc-certificate.pdf" target="_blank">
+                Open PDF
+            </a>
         </div>
 
     </div>
