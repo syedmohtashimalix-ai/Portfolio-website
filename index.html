@@ -377,77 +377,50 @@ footer{
     position: absolute;
 }
 
+/* =========================
+   INDIVIDUAL CARD CONTROL
+========================= */
+
+/* Common setup for all cards */
+#education .card, 
+#experience .experience-card {
+    position: relative;
+    min-height: 480px; /* Adjust based on your text amount */
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 247, 255, 0.18);
+    border-radius: 18px;
+    padding: 24px;
+    display: block;
+}
+
+/* Base styles for absolute elements */
+#education .card h3, .badge-wrap, .desc, .project-btn {
+    position: absolute;
+}
+
 /* -------------------------
    EDUCATION CARD 1 (GISMA)
    ------------------------- */
-#education .card:nth-child(1) h3 { top: 28px; left: 24px; }
-#education .card:nth-child(1) .badge-wrap { top: 80px; left: 24px; }
-#education .card:nth-child(1) .desc { top: 140px; left: 24px; right: 24px; }
+#education .card:nth-child(1) h3 { top: 25px; left: 24px; }
+#education .card:nth-child(1) .badge-wrap { top: 65px; left: 24px; }
+#education .card:nth-child(1) .desc { top: 110px; left: 24px; right: 24px; }
 #education .card:nth-child(1) .project-btn { top: 230px; left: 24px; }
 
 /* -------------------------
    EDUCATION CARD 2 (HSSC)
    ------------------------- */
-#education .card:nth-child(2) h3 { top: 28px; left: 30px; } /* Slightly different position */
-#education .card:nth-child(2) .badge-wrap { top: 80px; left: 30px; }
-#education .card:nth-child(2) .desc { top: 140px; left: 30px; right: 24px; }
-#education .card:nth-child(2) .project-btn { top: 230px; left: 30px; }
+#education .card:nth-child(2) h3 { top: 30px; left: 30px; } /* Slightly different position */
+#education .card:nth-child(2) .badge-wrap { top: 75px; left: 30px; }
+#education .card:nth-child(2) .desc { top: 120px; left: 30px; right: 24px; }
+#education .card:nth-child(2) .project-btn { top: 250px; left: 30px; }
 
 /* -------------------------
    EDUCATION CARD 3 (SSC)
    ------------------------- */
-#education .card:nth-child(3) h3 { top: 28px; left: 20px; }
-#education .card:nth-child(3) .badge-wrap { top: 80px; left: 20px; }
-#education .card:nth-child(3) .desc { top: 140px; left: 20px; right: 24px; }
-#education .card:nth-child(3) .project-btn { top: 230px; left: 20px; }
-/* =========================
-   EDUCATION MANUAL POSITIONING
-========================= */
-
-#education .card {
-    position: relative; /* REQUIRED for top/left control */
-    min-height: 310px;  /* Adjust this to give yourself enough room */
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(0, 247, 255, 0.18);
-    border-radius: 18px;
-    padding: 24px;
-    transition: 0.35s ease;
-    display: block;      /* Changed from flex to block for manual positioning */
-}
-
-/* Control Title Position */
-#education .card h3 {
-    position: absolute;
-    top: 20px;          /* 🔥 Adjust to move up/down */
-    left: 24px;         /* 🔥 Adjust to move left/right */
-    color: #ffffff;
-    font-size: 20px;
-}
-
-/* Control Badge Position */
-#education .card .badge-wrap {
-    position: absolute;
-    top: 65px;          /* 🔥 Adjust to move up/down */
-    left: 24px;
-}
-
-/* Control Description Text Position */
-#education .card .desc {
-    position: absolute;
-    top: 105px;         /* 🔥 Adjust to move up/down */
-    left: 24px;
-    right: 24px;
-    color: rgba(255, 255, 255, 0.78);
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-/* Control Open PDF Button Position */
-#education .card .project-btn {
-    position: absolute;
-    top: 220px;         /* 🔥 Adjust to move up/down */
-    left: 24px;
-}
+#education .card:nth-child(3) h3 { top: 20px; left: 20px; }
+#education .card:nth-child(3) .badge-wrap { top: 60px; left: 20px; }
+#education .card:nth-child(3) .desc { top: 100px; left: 20px; right: 24px; }
+#education .card:nth-child(3) .project-btn { top: 210px; left: 20px; }
 /* =========================
    SKILLS PREMIUM STYLE
 ========================= */
