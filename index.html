@@ -7,7 +7,52 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<style>
+<style
+
+/* =========================
+   INDIVIDUAL CARD CONTROL
+========================= */
+
+/* Common setup for all cards */
+#education .card, 
+#experience .experience-card {
+    position: relative;
+    min-height: 480px; /* Adjust based on your text amount */
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 247, 255, 0.18);
+    border-radius: 18px;
+    padding: 24px;
+    display: block;
+}
+
+/* Base styles for absolute elements */
+#education .card h3, .badge-wrap, .desc, .project-btn {
+    position: absolute;
+}
+
+/* -------------------------
+   EDUCATION CARD 1 (GISMA)
+   ------------------------- */
+#education .card:nth-child(1) h3 { top: 25px; left: 24px; }
+#education .card:nth-child(1) .badge-wrap { top: 65px; left: 24px; }
+#education .card:nth-child(1) .desc { top: 110px; left: 24px; right: 24px; }
+#education .card:nth-child(1) .project-btn { top: 230px; left: 24px; }
+
+/* -------------------------
+   EDUCATION CARD 2 (HSSC)
+   ------------------------- */
+#education .card:nth-child(2) h3 { top: 30px; left: 30px; } /* Slightly different position */
+#education .card:nth-child(2) .badge-wrap { top: 75px; left: 30px; }
+#education .card:nth-child(2) .desc { top: 120px; left: 30px; right: 24px; }
+#education .card:nth-child(2) .project-btn { top: 250px; left: 30px; }
+
+/* -------------------------
+   EDUCATION CARD 3 (SSC)
+   ------------------------- */
+#education .card:nth-child(3) h3 { top: 20px; left: 20px; }
+#education .card:nth-child(3) .badge-wrap { top: 60px; left: 20px; }
+#education .card:nth-child(3) .desc { top: 100px; left: 20px; right: 24px; }
+#education .card:nth-child(3) .project-btn { top: 210px; left: 20px; }
 
 /* =========================
    PROJECTS INDIVIDUAL CONTROL
@@ -356,71 +401,7 @@ footer{
     border-top:1px solid rgba(0,200,255,0.2);
 }
 
-/* ========================
-   INDIVIDUAL CARD CONTROL
-========================= */
-
-/* Common setup for all cards */
-#education .card, 
-#experience .experience-card {
-    position: relative;
-    min-height: 480px; /* Adjust based on your text amount */
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(0, 247, 255, 0.18);
-    border-radius: 18px;
-    padding: 24px;
-    display: block;
-}
-
-/* Base styles for absolute elements */
-#education .card h3, .badge-wrap, .desc, .project-btn {
-    position: absolute;
-}
-
-/* =========================
-   INDIVIDUAL CARD CONTROL
-========================= */
-
-/* Common setup for all cards */
-#education .card, 
-#experience .experience-card {
-    position: relative;
-    min-height: 480px; /* Adjust based on your text amount */
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(0, 247, 255, 0.18);
-    border-radius: 18px;
-    padding: 24px;
-    display: block;
-}
-
-/* Base styles for absolute elements */
-#education .card h3, .badge-wrap, .desc, .project-btn {
-    position: absolute;
-}
-
-/* -------------------------
-   EDUCATION CARD 1 (GISMA)
-   ------------------------- */
-#education .card:nth-child(1) h3 { top: 25px; left: 24px; }
-#education .card:nth-child(1) .badge-wrap { top: 65px; left: 24px; }
-#education .card:nth-child(1) .desc { top: 110px; left: 24px; right: 24px; }
-#education .card:nth-child(1) .project-btn { top: 230px; left: 24px; }
-
-/* -------------------------
-   EDUCATION CARD 2 (HSSC)
-   ------------------------- */
-#education .card:nth-child(2) h3 { top: 30px; left: 30px; } /* Slightly different position */
-#education .card:nth-child(2) .badge-wrap { top: 75px; left: 30px; }
-#education .card:nth-child(2) .desc { top: 120px; left: 30px; right: 24px; }
-#education .card:nth-child(2) .project-btn { top: 250px; left: 30px; }
-
-/* -------------------------
-   EDUCATION CARD 3 (SSC)
-   ------------------------- */
-#education .card:nth-child(3) h3 { top: 20px; left: 20px; }
-#education .card:nth-child(3) .badge-wrap { top: 60px; left: 20px; }
-#education .card:nth-child(3) .desc { top: 100px; left: 20px; right: 24px; }
-#education .card:nth-child(3) .project-btn { top: 210px; left: 20px; }
+/
 /* =========================
    SKILLS PREMIUM STYLE
 ========================= */
@@ -779,7 +760,6 @@ footer{
 
     </div>
 </section>
-
 <section id="education">
     <h2 class="section-title">Education</h2>
     <div class="cards">
@@ -806,9 +786,7 @@ footer{
         </div>
 
     </div>
-
 </section>
-
 
 <!-- LANGUAGE -->
 <section id="language">
