@@ -603,7 +603,7 @@ footer{
 }
 
 /* =========================
-   EDUCATION INDIVIDUAL CONTROL (FIXED)
+   EDUCATION INDIVIDUAL CONTROL (CLEAN + FIXED)
 ========================= */
 
 #education .card{
@@ -616,9 +616,25 @@ footer{
     padding: 24px;
 
     overflow: hidden;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(0,247,255,0.18);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s ease;
 }
 
-/* movable elements */
+#education .card:hover{
+    transform: translateY(-6px);
+
+    box-shadow: 0 0 24px rgba(0,247,255,0.25);
+}
+
+/* Make elements movable */
 #education .card h3,
 #education .card .badge-wrap,
 #education .card .desc,
@@ -649,7 +665,6 @@ footer{
 #education .card:nth-of-type(1) .certificate-box{
     bottom:30px;
     left:24px;
-    right:24px;
 }
 
 /* =========================
@@ -675,7 +690,6 @@ footer{
 #education .card:nth-of-type(2) .certificate-box{
     bottom:30px;
     left:24px;
-    right:24px;
 }
 
 /* =========================
@@ -701,11 +715,52 @@ footer{
 #education .card:nth-of-type(3) .certificate-box{
     bottom:30px;
     left:24px;
-    right:24px;
 }
 
 /* =========================
-   PROJECT INDIVIDUAL CONTROL (FIXED)
+   CV STYLE CERTIFICATE BUTTON
+========================= */
+
+.certificate-box{
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border-radius: 10px;
+
+    background: rgba(0,200,255,0.12);
+
+    border: 1px solid rgba(0,200,255,0.35);
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s ease;
+
+    box-shadow: 0 0 12px rgba(0,200,255,0.15);
+}
+
+.certificate-box:hover{
+    transform: translateY(-2px);
+
+    box-shadow: 0 0 18px rgba(0,200,255,0.35);
+
+    background: rgba(0,200,255,0.18);
+}
+
+.certificate-box a{
+    color: #00e5ff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    letter-spacing: 0.3px;
+}
+
+/* =========================
+   PROJECT INDIVIDUAL CONTROL (CLEAN + FIXED)
 ========================= */
 
 #projects .project-card{
@@ -718,9 +773,25 @@ footer{
     padding: 24px;
 
     overflow: hidden;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(0,247,255,0.18);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s ease;
 }
 
-/* movable elements */
+#projects .project-card:hover{
+    transform: translateY(-6px);
+
+    box-shadow: 0 0 24px rgba(0,247,255,0.25);
+}
+
+/* Make everything movable */
 #projects .project-card h3,
 #projects .project-card .badge-wrap,
 #projects .project-card .project-desc,
@@ -730,7 +801,7 @@ footer{
 }
 
 /* =========================
-   PROJECT 1
+   PROJECT CARD 1
 ========================= */
 
 #projects .project-card:nth-of-type(1) h3{
@@ -757,11 +828,10 @@ footer{
 #projects .project-card:nth-of-type(1) .certificate-box{
     bottom:30px;
     left:24px;
-    right:24px;
 }
 
 /* =========================
-   PROJECT 2
+   PROJECT CARD 2
 ========================= */
 
 #projects .project-card:nth-of-type(2) h3{
@@ -788,11 +858,10 @@ footer{
 #projects .project-card:nth-of-type(2) .certificate-box{
     bottom:30px;
     left:24px;
-    right:24px;
 }
 
 /* =========================
-   PROJECT 3
+   PROJECT CARD 3
 ========================= */
 
 #projects .project-card:nth-of-type(3) h3{
@@ -819,7 +888,48 @@ footer{
 #projects .project-card:nth-of-type(3) .certificate-box{
     bottom:30px;
     left:24px;
-    right:24px;
+}
+
+/* =========================
+   CV STYLE BUTTON (PROJECT + EDUCATION SAME STYLE)
+========================= */
+
+.certificate-box{
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border-radius: 10px;
+
+    background: rgba(0,200,255,0.12);
+
+    border: 1px solid rgba(0,200,255,0.35);
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s ease;
+
+    box-shadow: 0 0 12px rgba(0,200,255,0.15);
+}
+
+.certificate-box:hover{
+    transform: translateY(-2px);
+
+    box-shadow: 0 0 18px rgba(0,200,255,0.35);
+
+    background: rgba(0,200,255,0.18);
+}
+
+.certificate-box a{
+    color: #00e5ff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    letter-spacing: 0.3px;
 }
    
 </style>
