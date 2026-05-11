@@ -1288,46 +1288,39 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-/* YOUR CUSTOM PATTERN */
-let letters = "01010000111";
+/* your fixed pattern */
+const pattern = "0101010";
 
-let fontSize = 16;
-let columns = Math.floor(canvas.width / fontSize);
+const fontSize = 18;
+const cols = Math.floor(canvas.width / fontSize);
+const rows = Math.floor(canvas.height / fontSize);
 
-/* random start positions for smoother look */
-let drops = Array(columns).fill(0).map(() => Math.random() * canvas.height);
-
+/* create grid */
 function draw(){
 
-    /* soft dark fade (important for readability) */
-    ctx.fillStyle = "rgba(0, 0, 20, 0.08)";
+    /* dark blue base */
+    ctx.fillStyle = "rgba(0, 0, 20, 1)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = "#00c8ff";
+    ctx.fillStyle = "rgba(0, 200, 255, 0.15)";
     ctx.font = fontSize + "px monospace";
 
-    for(let i = 0; i < drops.length; i++){
+    for(let y = 0; y < rows; y++){
+        for(let x = 0; x < cols; x++){
 
-        let text = letters[Math.floor(Math.random() * letters.length)];
+            let char = pattern[(x + y) % pattern.length];
 
-        ctx.fillText(
-            text,
-            i * fontSize,
-            drops[i]
-        );
-
-        /* smooth downward movement */
-        drops[i] += 1.1;
-
-        /* reset when off screen */
-        if(drops[i] > canvas.height){
-            drops[i] = 0;
+            ctx.fillText(
+                char,
+                x * fontSize,
+                y * fontSize
+            );
         }
     }
 }
 
-/* smooth animation speed */
-setInterval(draw, 60);
+/* draw once (static background, no animation) */
+draw();
 </script>
 
 </body>
