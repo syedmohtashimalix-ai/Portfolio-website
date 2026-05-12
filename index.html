@@ -10,6 +10,90 @@
 <style>
 
 /* =========================
+   3D BACKGROUND
+========================= */
+
+#bg{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background:#050816;
+}
+
+canvas{
+    display:block;
+}
+
+/* overlay glow */
+.overlay{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(0,217,255,0.08),
+        transparent 70%
+    );
+
+    pointer-events:none;
+}
+   @media(max-width:900px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:140px;
+    }
+
+    .hero-text{
+        width:100%;
+    }
+
+    .hero-text h2{
+        font-size:42px;
+    }
+
+    .hero-image{
+        width:260px;
+        height:260px;
+    }
+
+    .contact-card{
+        width:100%;
+    }
+
+    #experience .experience-card,
+    #projects .project-card,
+    #education .card{
+        min-height:auto;
+    }
+
+    #experience .experience-card *,
+    #projects .project-card *,
+    #education .card *{
+        position:relative !important;
+        top:auto !important;
+        left:auto !important;
+        right:auto !important;
+        bottom:auto !important;
+    }
+
+}
+
+/* =========================
    CLOSING SECTION
 ========================= */
 
@@ -49,30 +133,6 @@ body{
     overflow-x:hidden;
 }
 
-/* =========================
-   MATRIX BACKGROUND (DARK BLUE)
-========================= */
-#matrix{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:-2;
-    opacity:6; /* 🔥 darker so text readable */
-}
-
-/* dark overlay for readability */
-body::before{
-    content:"";
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,20,0.65);
-    z-index:-1;
-}
 
 /* =========================
    HEADER
@@ -754,8 +814,11 @@ footer{
 
 <body>
 
-<!-- MATRIX BACKGROUND -->
-<canvas id="matrix"></canvas>
+<!-- 3D Background -->
+<div id="bg"></div>
+
+<!-- Glow Overlay -->
+<div class="overlay"></div>
 
 <header>
     <h1>My Portfolio</h1>
@@ -1280,48 +1343,178 @@ footer{
     <p>© 2026 Syed Mohtashim Ali | Built with passion 🚀</p>
 </footer>
 
-<!-- MATRIX SCRIPT -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
 <script>
-const canvas = document.getElementById("matrix");
-const ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+const scene = new THREE.Scene();
 
-/* your fixed pattern */
-const pattern = "0101010";
+const camera = new THREE.PerspectiveCamera(
+  75,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000
+);
 
-const fontSize = 18;
-const cols = Math.floor(canvas.width / fontSize);
-const rows = Math.floor(canvas.height / fontSize);
+const renderer = new THREE.WebGLRenderer({
+  antialias:true,
+  alpha:true
+});
 
-/* create grid */
-function draw(){
+renderer.setSize(window.innerWidth, window.innerHeight);
 
-    /* dark blue base */
-    ctx.fillStyle = "rgba(0, 0, 20, 1)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+renderer.setPixelRatio(window.devicePixelRatio);
 
-    ctx.fillStyle = "rgba(0, 200, 255, 0.15)";
-    ctx.font = fontSize + "px monospace";
+document.getElementById("bg")
+  .appendChild(renderer.domElement);
 
-    for(let y = 0; y < rows; y++){
-        for(let x = 0; x < cols; x++){
+camera.position.z = 30;
 
-            let char = pattern[(x + y) % pattern.length];
+/* Nodes */
 
-            ctx.fillText(
-                char,
-                x * fontSize,
-                y * fontSize
-            );
-        }
-    }
+const nodes = [];
+const lines = [];
+
+const geometry =
+  new THREE.SphereGeometry(0.15,16,16);
+
+for(let i = 0; i < 100; i++){
+
+  const material =
+    new THREE.MeshBasicMaterial({
+      color:0x00d9ff
+    });
+
+  const sphere =
+    new THREE.Mesh(geometry,material);
+
+  sphere.position.x =
+    (Math.random()-0.5)*60;
+
+  sphere.position.y =
+    (Math.random()-0.5)*60;
+
+  sphere.position.z =
+    (Math.random()-0.5)*60;
+
+  sphere.velocityX =
+    (Math.random()-0.5)*0.02;
+
+  sphere.velocityY =
+    (Math.random()-0.5)*0.02;
+
+  scene.add(sphere);
+
+  nodes.push(sphere);
 }
 
-/* draw once (static background, no animation) */
-draw();
+/* Connections */
+
+function createConnections(){
+
+  lines.forEach(line => scene.remove(line));
+
+  lines.length = 0;
+
+  for(let i = 0; i < nodes.length; i++){
+
+    for(let j = i + 1; j < nodes.length; j++){
+
+      const dx =
+        nodes[i].position.x -
+        nodes[j].position.x;
+
+      const dy =
+        nodes[i].position.y -
+        nodes[j].position.y;
+
+      const dz =
+        nodes[i].position.z -
+        nodes[j].position.z;
+
+      const distance =
+        Math.sqrt(dx*dx + dy*dy + dz*dz);
+
+      if(distance < 8){
+
+        const points = [];
+
+        points.push(nodes[i].position);
+        points.push(nodes[j].position);
+
+        const lineGeometry =
+          new THREE.BufferGeometry()
+          .setFromPoints(points);
+
+        const lineMaterial =
+          new THREE.LineBasicMaterial({
+            color:0x00d9ff,
+            transparent:true,
+            opacity:0.2
+          });
+
+        const line =
+          new THREE.Line(
+            lineGeometry,
+            lineMaterial
+          );
+
+        scene.add(line);
+
+        lines.push(line);
+      }
+    }
+  }
+}
+
+/* Animation */
+
+function animate(){
+
+  requestAnimationFrame(animate);
+
+  nodes.forEach(node => {
+
+    node.position.x += node.velocityX;
+    node.position.y += node.velocityY;
+
+    if(node.position.x > 30 || node.position.x < -30){
+      node.velocityX *= -1;
+    }
+
+    if(node.position.y > 30 || node.position.y < -30){
+      node.velocityY *= -1;
+    }
+
+  });
+
+  createConnections();
+
+  scene.rotation.y += 0.001;
+
+  renderer.render(scene,camera);
+}
+
+animate();
+
+/* Resize */
+
+window.addEventListener("resize",()=>{
+
+  camera.aspect =
+    window.innerWidth/window.innerHeight;
+
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(
+    window.innerWidth,
+    window.innerHeight
+  );
+
+});
+
 </script>
+  
 
 </body>
 </html>
