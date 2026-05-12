@@ -7,6 +7,8 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+   
+
 <style>
 
 /* =========================
@@ -1343,10 +1345,12 @@ footer{
     <p>© 2026 Syed Mohtashim Ali | Built with passion 🚀</p>
 </footer>
 
+   
+
    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+   
 
 <script>
-
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(
@@ -1357,110 +1361,75 @@ const camera = new THREE.PerspectiveCamera(
 );
 
 const renderer = new THREE.WebGLRenderer({
-  antialias:true,
-  alpha:true
+  antialias: true,
+  alpha: true
 });
 
 renderer.setSize(window.innerWidth, window.innerHeight);
-
 renderer.setPixelRatio(window.devicePixelRatio);
 
-document.getElementById("bg")
-  .appendChild(renderer.domElement);
+document.getElementById("bg").appendChild(renderer.domElement);
 
 camera.position.z = 30;
 
 /* Nodes */
-
 const nodes = [];
 const lines = [];
 
-const geometry =
-  new THREE.SphereGeometry(0.15,16,16);
+const geometry = new THREE.SphereGeometry(0.15, 16, 16);
 
-for(let i = 0; i < 100; i++){
+/* Create particles */
+for (let i = 0; i < 120; i++) {
 
-  const material =
-    new THREE.MeshBasicMaterial({
-      color:0x00d9ff
-    });
+  const material = new THREE.MeshBasicMaterial({
+    color: 0x00d9ff
+  });
 
-  const sphere =
-    new THREE.Mesh(geometry,material);
+  const sphere = new THREE.Mesh(geometry, material);
 
-  sphere.position.x =
-    (Math.random()-0.5)*60;
+  sphere.position.x = (Math.random() - 0.5) * 60;
+  sphere.position.y = (Math.random() - 0.5) * 60;
+  sphere.position.z = (Math.random() - 0.5) * 60;
 
-  sphere.position.y =
-    (Math.random()-0.5)*60;
-
-  sphere.position.z =
-    (Math.random()-0.5)*60;
-
-  sphere.velocityX =
-    (Math.random()-0.5)*0.02;
-
-  sphere.velocityY =
-    (Math.random()-0.5)*0.02;
+  sphere.velocityX = (Math.random() - 0.5) * 0.02;
+  sphere.velocityY = (Math.random() - 0.5) * 0.02;
 
   scene.add(sphere);
-
   nodes.push(sphere);
 }
 
 /* Connections */
-
-function createConnections(){
+function createConnections() {
 
   lines.forEach(line => scene.remove(line));
-
   lines.length = 0;
 
-  for(let i = 0; i < nodes.length; i++){
+  for (let i = 0; i < nodes.length; i++) {
+    for (let j = i + 1; j < nodes.length; j++) {
 
-    for(let j = i + 1; j < nodes.length; j++){
+      const dx = nodes[i].position.x - nodes[j].position.x;
+      const dy = nodes[i].position.y - nodes[j].position.y;
+      const dz = nodes[i].position.z - nodes[j].position.z;
 
-      const dx =
-        nodes[i].position.x -
-        nodes[j].position.x;
+      const distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
 
-      const dy =
-        nodes[i].position.y -
-        nodes[j].position.y;
-
-      const dz =
-        nodes[i].position.z -
-        nodes[j].position.z;
-
-      const distance =
-        Math.sqrt(dx*dx + dy*dy + dz*dz);
-
-      if(distance < 8){
+      if (distance < 8) {
 
         const points = [];
-
         points.push(nodes[i].position);
         points.push(nodes[j].position);
 
-        const lineGeometry =
-          new THREE.BufferGeometry()
-          .setFromPoints(points);
+        const lineGeometry = new THREE.BufferGeometry().setFromPoints(points);
 
-        const lineMaterial =
-          new THREE.LineBasicMaterial({
-            color:0x00d9ff,
-            transparent:true,
-            opacity:0.2
-          });
+        const lineMaterial = new THREE.LineBasicMaterial({
+          color: 0x00d9ff,
+          transparent: true,
+          opacity: 0.25
+        });
 
-        const line =
-          new THREE.Line(
-            lineGeometry,
-            lineMaterial
-          );
+        const line = new THREE.Line(lineGeometry, lineMaterial);
 
         scene.add(line);
-
         lines.push(line);
       }
     }
@@ -1468,8 +1437,7 @@ function createConnections(){
 }
 
 /* Animation */
-
-function animate(){
+function animate() {
 
   requestAnimationFrame(animate);
 
@@ -1478,11 +1446,11 @@ function animate(){
     node.position.x += node.velocityX;
     node.position.y += node.velocityY;
 
-    if(node.position.x > 30 || node.position.x < -30){
+    if (node.position.x > 30 || node.position.x < -30) {
       node.velocityX *= -1;
     }
 
-    if(node.position.y > 30 || node.position.y < -30){
+    if (node.position.y > 30 || node.position.y < -30) {
       node.velocityY *= -1;
     }
 
@@ -1490,31 +1458,23 @@ function animate(){
 
   createConnections();
 
-  scene.rotation.y += 0.001;
+  scene.rotation.y += 0.0015;
 
-  renderer.render(scene,camera);
+  renderer.render(scene, camera);
 }
 
 animate();
 
 /* Resize */
+window.addEventListener("resize", () => {
 
-window.addEventListener("resize",()=>{
-
-  camera.aspect =
-    window.innerWidth/window.innerHeight;
-
+  camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
 
-  renderer.setSize(
-    window.innerWidth,
-    window.innerHeight
-  );
+  renderer.setSize(window.innerWidth, window.innerHeight);
 
 });
-
 </script>
-  
 
 </body>
 </html>
